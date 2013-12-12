@@ -14,7 +14,7 @@
 --------------------------------------------- */
 
 .title-area {
-	@include column(4);
+	@include column(12);
 	font-weight: 700;
 	float: left;
 	padding: 16px 0;
@@ -51,13 +51,28 @@
 --------------------------------------------- */
 
 .site-header .widget-area {
-	@include column(8);
-	float: right;
-	text-align: right;
+	@include column(12);
 }
 
-.header-image .site-header .widget-area {
-	padding: 40px 0;
+.header-image .site-header .wrap {
+	background-position: center top;
+}
+
+.header-image .site-header .widget-area,
+.site-header {
+	padding: 20px;
+}
+
+.site-header ul.genesis-nav-menu,
+.site-header .search-form {
+	float: none;
+}
+
+.site-description,
+.site-header .title-area,
+.site-header .search-form,
+.site-title {
+	text-align: center;
 }
 
 .site-header .search-form {
@@ -78,49 +93,36 @@
 
 }
 
-@media only screen and (max-width: $break-large) {
+@media only screen and (min-width: $break-small) {
 
-	.site-header .widget-area {
-		@include column(8);
-	}
+}
+
+@media only screen and (min-width: $break-medium) {
 
 	.title-area {
 		@include column(4);
 	}
 
-}
-
-@media only screen and (max-width: $break-medium) {
-
-}
-
-@media only screen and (max-width: $break-small) {
-
-	.site-header .widget-area,
-	.site-inner,
-	.title-area {
-		@include column(12);
+	.site-header .widget-area {
+		@include column(8);
+		float: right;
+		text-align: right;
 	}
 
-	.header-image .site-header .wrap {
-		background-position: center top;
-	}
-
-	.header-image .site-header .widget-area,
-	.site-header {
-		padding: 0;
-	}
-
-	.site-header ul.genesis-nav-menu,
-	.site-header .search-form {
-		float: none;
+	.header-image .site-header .widget-area {
+		padding: 40px 0;
 	}
 
 	.site-description,
 	.site-header .title-area,
 	.site-header .search-form,
 	.site-title {
-		text-align: center;
+		text-align: left;
 	}
 
 }
+
+@media only screen and (min-width: $break-large) {
+
+}
+

@@ -8,11 +8,11 @@
 	margin-bottom: 40px;
 }
 
-.entry-comments {
-	padding: 40px;
+.entry-comments,
+.comment-respond {
+	padding: 0;
 }
 
-.comment-respond,
 .entry-pings {
 	padding: 40px 40px 16px;
 }
@@ -73,19 +73,23 @@ li.comment {
 	padding: 24px;
 }
 
-@media only screen and (max-width: $break-large) {
+@media only screen and (min-width: $break-large) {
 
 }
 
-@media only screen and (max-width: $break-medium) {
+@media only screen and (min-width: $break-medium) {
 
-}
-
-@media only screen and (max-width: $break-small) {
-
-	.entry-comments,
-	.comment-respond {
-		padding: 0;
+	.entry-comments {
+		padding: 40px;
 	}
+
+	.comment-respond {
+		padding: 40px 40px 16px;
+	}
+
+}
+
+@media only screen and (min-width: $break-small) {
+
 
 }

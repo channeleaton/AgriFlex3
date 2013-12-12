@@ -1,24 +1,33 @@
 /* Site Navigation
 ---------------------------------------------------------------------------------------------------- */
 
+.genesis-nav-menu .menu-item,
+.site-header ul.genesis-nav-menu {
+	float: none;
+}
+
+.genesis-nav-menu {
+	text-align: center;
+}
+
 .genesis-nav-menu {
 	clear: both;
 	color: $nav-text;
 	line-height: 1.5;
-	@include column(12);
 
 	.menu-item {
-		float: left;
 		list-style: none;
 
-		&:hover {
+		&:hover,
+		&:active {
 			position: static;
+
+			> .sub-menu {
+				left: auto;
+				opacity: 1;
+			}
 		}
 
-		&:hover > .sub-menu {
-			left: auto;
-			opacity: 1;
-		}
 	}
 
 	a {
@@ -29,8 +38,10 @@
 		position: relative;
 
 		&:hover,
+		&:active,
 		.current-menu-item > a,
-		.sub-menu .current-menu-item > a:hover {
+		.sub-menu .current-menu-item > a:hover,
+		.sub-menu .current-menu-item > a:active {
 			color: $gray-light;
 		}
 	}
@@ -102,33 +113,44 @@
 --------------------------------------------- */
 
 .nav-primary {
-	@include column(12);
+	@include row(12);
+	overflow: visible;
+
+	.wrap {
+		overflow: visible;
+	}
 }
 
 /* Secondary Navigation
 --------------------------------------------- */
 
 .nav-secondary {
-}
+	@include row(12);
+	overflow: visible;
 
-@media only screen and (max-width: $break-large) {
-
-}
-
-@media only screen and (max-width: $break-medium) {
-
-}
-
-@media only screen and (max-width: $break-small) {
-
-	.genesis-nav-menu li,
-	.site-header ul.genesis-nav-menu {
-		float: none;
+	.wrap {
+		overflow: visible;
 	}
+}
+
+@media only screen and (min-width: $break-large) {
+
+}
+
+@media only screen and (min-width: $break-medium) {
 
 	.genesis-nav-menu {
-		text-align: center;
+		text-align: left;
+
+		.menu-item {
+			float: left;
+		}
 	}
+
+}
+
+@media only screen and (min-width: $break-small) {
+
 
 
 }

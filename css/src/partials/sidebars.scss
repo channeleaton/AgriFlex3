@@ -2,6 +2,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .sidebar {
+	@include margin-leader();
 
 	p:last-child {
 		margin-bottom: 0;
@@ -19,8 +20,8 @@
 
 	.widget {
 		background-color: $widget-background;
-		margin-bottom: 40px;
-		padding: 40px;
+		@include margin-trailer();
+		padding: 0;
 	}
 
 	&.sidebar-primary {
@@ -30,22 +31,29 @@
 	}
 }
 
-@media only screen and (max-width: $break-large) {
+@media only screen and (min-width: $break-small) {
+	.sidebar {
 
+		.widget {
+			@include column(4);
+			@include margin-trailer();
+		}
+	}
 }
 
-@media only screen and (max-width: $break-medium) {
+@media only screen and (min-width: $break-medium) {
+
+	.sidebar {
+		margin-top: 0;
+
+		.widget {
+			@include column(12);
+			@include margin-trailer();
+		}
+	}
 	
 }
 
-@media only screen and (max-width: $break-small) {
-	
-	.sidebar-primary,
-	.sidebar-secondary {
-		@include column(12);
-	}
+@media only screen and (min-width: $break-large) {
 
-	.sidebar .widget {
-		padding: 0;
-	}
 }

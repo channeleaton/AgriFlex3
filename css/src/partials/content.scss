@@ -54,6 +54,13 @@
 	}
 }
 
+.archive-description,
+.author-box,
+.entry,
+.entry-footer .entry-meta {
+	padding: 0;
+}
+
 .quote-caption {
 	margin-bottom: 26px;
 }
@@ -101,24 +108,14 @@
 	}
 }
 
-@media only screen and (max-width: $break-large) {
+@media only screen and (min-width: $break-large) {
 
 }
 
-@media only screen and (max-width: $break-medium) {
+@media only screen and (min-width: $break-medium) {
 	
 }
 
-@media only screen and (max-width: $break-small) {
+@media only screen and (min-width: $break-small) {
 	
-	.content {
-		@include column(12);
-	}
-
-	.archive-description,
-	.author-box,
-	.entry,
-	.entry-footer .entry-meta {
-		padding: 0;
-	}
 }

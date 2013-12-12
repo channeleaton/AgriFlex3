@@ -12,20 +12,22 @@
 	p {
     margin-bottom: 0;
 	}
-}
-
-
-@media only screen and (max-width: $break-large) {
-
-}
-
-@media only screen and (max-width: $break-medium) {
-	
-}
-
-@media only screen and (max-width: $break-small) {
 	
 	.footer-widgets .widget-area {
 		@include column(12);
 	}
+
+}
+
+
+@media only screen and (min-width: $break-large) {
+
+}
+
+@media only screen and (min-width: $break-medium) {
+	
+}
+
+@media only screen and (min-width: $break-small) {
+
 }
