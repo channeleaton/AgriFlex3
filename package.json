@@ -1,23 +1,25 @@
 {
   "name": "AgriFlex3",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Genesis child theme for Texas A&M AgriLife",
   "main": "functions.php",
+  "dependencies": {
+    "grunt": "~0.4.2"
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-csslint": "~0.2.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3"
+  },
   "scripts": {
-    "test": "test"
+    "test": "phpunit"
   },
   "repository": "",
-  "author": "J. Aaron Eaton",
-  "license": "GPL2",
+  "author": "J. Aaron Eaton and Travis Ward",
+  "license": "GPL2+",
   "readmeFilename": "README.md",
-  "gitHead": "1b683c38aa9161f7c9787a8e2c75c47f5444d338",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-compass": "~0.2.0",
-    "grunt-contrib-coffee": "~0.7.0",
-    "grunt-contrib-watch": "~0.4.3",
-    "grunt-contrib-jshint": "~0.4.3",
-    "grunt-contrib-csslint": "~0.1.2",
-    "grunt-contrib-cssmin": "~0.6.0"
-  }
+  "gitHead": "2615a0b03ab69dd760c12a22ba8275021c349605"
 }

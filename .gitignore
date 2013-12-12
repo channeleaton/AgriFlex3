@@ -45,4 +45,5 @@ js/public.min.js
 js/admin.min.js
 
 # Ignore dependencies using package control
+node_modules/*
 js/lib/*

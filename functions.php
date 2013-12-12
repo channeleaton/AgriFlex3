@@ -31,10 +31,10 @@ class AgriFlex {
 	public function init() {
 
 		// Get Genesis setup the way we want it
-		$af_genesis = new AF_Genesis;
+		$af_genesis = new AgriFlex_Genesis;
 
 		// Enqueue our assets
-		$af_assets = new AF_Assets;
+		$af_assets = new AgriFlex_Assets;
 
 	}
 
