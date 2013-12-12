@@ -4,9 +4,9 @@
   "description": "Genesis child theme for Texas A&M AgriLife",
   "main": "functions.php",
   "dependencies": {
+    "grunt": "latest"
   },
   "devDependencies": {
-    "grunt": "latest"
     "grunt-contrib-coffee": "~0.7.0",
     "grunt-contrib-compass": "~0.6.0",
     "grunt-contrib-jshint": "~0.7.2",
