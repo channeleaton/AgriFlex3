@@ -114,6 +114,7 @@
 
 .nav-primary {
 	@include row(12);
+	float: left;
 	overflow: visible;
 
 	.wrap {
