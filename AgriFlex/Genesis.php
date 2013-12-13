@@ -21,8 +21,10 @@ class AgriFlex_Genesis {
 		// Force IE out of compatibility mode
 		add_action( 'genesis_meta', array( $this, 'fix_compatibility_mode' ) );
 
-		// Remove default html5shiv
+		// Fix html5shiv
 		remove_action( 'wp_head', 'genesis_html5_ie_fix' );
+		add_action( 'wp_head', array( $this, 'html5shiv' ), 0);
+		add_action( 'wp_head', array( $this, 'respond_js' ), 40 );
 
 		// Specify the favicon location
 		add_filter( 'genesis_pre_load_favicon', array( $this, 'add_favicon' ) );
@@ -83,6 +85,34 @@ class AgriFlex_Genesis {
 
 		echo '<meta http-equiv="X-UA-Compatible" content="IE=Edge">';
 
+	}
+
+	/**
+	 * Places html5shiv in the right place
+	 * @since 1.0
+	 * @return void
+	 */
+	public function html5shiv() { ?>
+
+		<!--[if lt IE 9]>
+	    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/lib/html5shiv/dist/html5shiv.js'; ?>"></script>
+		<![endif]-->
+
+	<?php
+	}
+
+	/**
+	 * Loads Respond.js when needed
+	 * @since 1.0
+	 * @return void
+	 */
+	public function respond_js() { ?>
+
+		<!--[if lt IE 9]>
+	    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/lib/respond/dest/respond.min.js'; ?>"></script>
+		<![endif]-->
+
+	<?php
 	}
 
 	/**
