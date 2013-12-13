@@ -14,6 +14,7 @@ require_once TEMPLATEPATH . '/lib/init.php';
 define( 'AF_THEME_DIRNAME', 'AgriFlex3' );
 define( 'AF_THEME_DIRPATH', get_stylesheet_directory() );
 define( 'AF_THEME_DIRURL', get_stylesheet_directory_uri() );
+define( 'AF_THEME_TEXTDOMAIN', 'agriflex' );
 
 // Autoload all classes
 spl_autoload_register( 'AgriFlex::autoload' );
