@@ -46,6 +46,9 @@ class AgriFlex_Genesis {
 		// Remove unneeded sidebars
 		$this->remove_genesis_sidebars();
 
+		// Move Genesis in-post SEO box to a lower position
+		remove_action( 'admin_menu', 'genesis_add_inpost_seo_box' );
+		add_action( 'admin_menu', array( $this, 'move_inpost_seo_box' ) );
 
 	}
 
@@ -207,6 +210,24 @@ class AgriFlex_Genesis {
 		$args['comment_notes_after']  = '';
 
 		return $args;
+
+	}
+
+	/**
+	 * Moves the Genesis in-post SEO box to a lower position
+	 * @since 1.0
+	 * @author Bill Erickson
+	 * @return void
+	 */
+	public function move_inpost_seo_box() {
+
+		if ( genesis_detect_seo_plugins() )
+			return;
+
+		foreach ( (array) get_post_types( array( 'public' => true ) ) as $type ) {
+			if ( post_type_supports( $type, 'genesis-seo' ) )
+				add_meta_box( 'genesis_inpost_seo_box', __( 'Theme SEO Settings', AF_THEME_TEXTDOMAIN ), 'genesis_inpost_seo_box', $type, 'normal', 'default' );
+		}
 
 	}
 
