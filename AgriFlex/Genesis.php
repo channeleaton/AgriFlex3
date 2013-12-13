@@ -24,6 +24,8 @@ class AgriFlex_Genesis {
 		// Fix html5shiv
 		remove_action( 'wp_head', 'genesis_html5_ie_fix' );
 		add_action( 'wp_head', array( $this, 'html5shiv' ), 0);
+
+		// Add respond.js
 		add_action( 'wp_head', array( $this, 'respond_js' ), 40 );
 
 		// Specify the favicon location
@@ -95,7 +97,7 @@ class AgriFlex_Genesis {
 	public function html5shiv() { ?>
 
 		<!--[if lt IE 9]>
-	    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/lib/html5shiv/dist/html5shiv.js'; ?>"></script>
+	    <script type="text/javascript" src="<?php AF_THEME_DIRPATH . '/js/lib/html5shiv/dist/html5shiv.js'; ?>"></script>
 		<![endif]-->
 
 	<?php
@@ -109,7 +111,7 @@ class AgriFlex_Genesis {
 	public function respond_js() { ?>
 
 		<!--[if lt IE 9]>
-	    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/lib/respond/dest/respond.min.js'; ?>"></script>
+	    <script type="text/javascript" src="<?php AF_THEME_DIRPATH . '/js/lib/respond/dest/respond.min.js'; ?>"></script>
 		<![endif]-->
 
 	<?php
