@@ -23,7 +23,9 @@ class AgriFlex {
 
 	private static $file = __FILE__;
 
-	public function __construct() {
+	private static $instance;
+
+	private function __construct() {
 
 		add_action( 'init', array( $this, 'init' ) );
 
@@ -61,6 +63,12 @@ class AgriFlex {
 
 	}
 
+	public static function get_instance() {
+
+		return null == self::$instance ? new self : self::$instance;
+
+	}
+
 }
 
-new AgriFlex;
+AgriFlex::get_instance();
