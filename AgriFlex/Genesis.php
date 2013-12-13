@@ -50,6 +50,10 @@ class AgriFlex_Genesis {
 		remove_action( 'admin_menu', 'genesis_add_inpost_seo_box' );
 		add_action( 'admin_menu', array( $this, 'move_inpost_seo_box' ) );
 
+		// Move Genesis in-post layout box to a lower position
+		remove_action( 'admin_menu', 'genesis_add_inpost_layout_box' );
+		add_action( 'admin_menu', array( $this, 'move_inpost_layout_box' ) );
+
 	}
 
 	/**
@@ -231,4 +235,20 @@ class AgriFlex_Genesis {
 
 	}
 
+	/**
+	 * Moves the Genesis in-post layout box to a lower postion
+	 * @since 1.0
+	 * @return void
+	 */
+	public function move_inpost_layout_box() {
+
+		if ( ! current_theme_supports( 'genesis-inpost-layouts' ) )
+			return;
+
+		foreach ( (array) get_post_types( array( 'public' => true ) ) as $type ) {
+			if ( post_type_supports( $type, 'genesis-layouts' ) )
+				add_meta_box( 'genesis_inpost_layout_box', __( 'Layout Settings', 'genesis' ), 'genesis_inpost_layout_box', $type, 'normal', 'default' );
+		}
+
+	}
 }
