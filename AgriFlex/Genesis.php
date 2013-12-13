@@ -34,6 +34,9 @@ class AgriFlex_Genesis {
 		// Create the structural wraps
 		$this->add_structural_wraps();
 
+		// Clean up the comment area
+		add_filter( 'comment_form_defaults', array( $this, 'cleanup_comment_text' ) );
+
 		// Remove profile fields
 		add_action( 'admin_init', array( $this, 'remove_profile_fields' ) );
 
@@ -43,8 +46,6 @@ class AgriFlex_Genesis {
 		// Remove unneeded sidebars
 		$this->remove_genesis_sidebars();
 
-		// Clean up the comment area
-		add_filter( 'comment_form_defaults', array( $this, 'cleanup_comment_text' ) );
 
 	}
 
