@@ -54,6 +54,9 @@ class AgriFlex_Genesis {
 		remove_action( 'admin_menu', 'genesis_add_inpost_layout_box' );
 		add_action( 'admin_menu', array( $this, 'move_inpost_layout_box' ) );
 
+		// Remove some Genesis settings metaboxes
+		add_action( 'genesis_theme_settings_metaboxes', array( $this, 'remove_genesis_metaboxes' ) );
+
 	}
 
 	/**
@@ -251,4 +254,21 @@ class AgriFlex_Genesis {
 		}
 
 	}
+
+	public function remove_genesis_metaboxes( $_genesis_theme_settings_pagehook ) {
+
+		if ( ! is_super_admin() )
+			remove_meta_box( 'genesis-theme-settings-version', $_genesis_theme_settings_pagehook, 'main' );
+
+		//remove_meta_box( 'genesis-theme-settings-feeds',      $_genesis_theme_settings_pagehook, 'main' );
+		//remove_meta_box( 'genesis-theme-settings-header',     $_genesis_theme_settings_pagehook, 'main' );
+		remove_meta_box( 'genesis-theme-settings-nav',        $_genesis_theme_settings_pagehook, 'main' );
+		remove_meta_box( 'genesis-theme-settings-breadcrumb', $_genesis_theme_settings_pagehook, 'main' );
+		//remove_meta_box( 'genesis-theme-settings-comments',   $_genesis_theme_settings_pagehook, 'main' );
+		//remove_meta_box( 'genesis-theme-settings-posts',      $_genesis_theme_settings_pagehook, 'main' );
+		//remove_meta_box( 'genesis-theme-settings-blogpage',   $_genesis_theme_settings_pagehook, 'main' );
+		remove_meta_box( 'genesis-theme-settings-scripts',    $_genesis_theme_settings_pagehook, 'main' );
+
+	}
+
 }
