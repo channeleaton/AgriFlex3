@@ -43,6 +43,9 @@ class AgriFlex_Genesis {
 		// Remove unneeded sidebars
 		$this->remove_genesis_sidebars();
 
+		// Clean up the comment area
+		add_filter( 'comment_form_defaults', array( $this, 'cleanup_comment_text' ) );
+
 	}
 
 	/**
@@ -188,6 +191,21 @@ class AgriFlex_Genesis {
 
 		unregister_sidebar( 'sidebar-alt' );
 		unregister_sidebar( 'header-right' );
+
+	}
+
+	/**
+	 * Cleans up the default comments text
+	 * @since 1.0
+	 * @param  array $args The default arguments
+	 * @return array       The new arguments
+	 */
+	public function cleanup_comment_text( $args ) {
+
+		$args['comment_notes_before'] = '';
+		$args['comment_notes_after']  = '';
+
+		return $args;
 
 	}
 
