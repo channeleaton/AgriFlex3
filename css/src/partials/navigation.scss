@@ -131,11 +131,15 @@ nav .wrap {
 	}
 }
 
-@media only screen and (min-width: $break-large) {
+@media #{$small-up} {
 
 }
 
-@media only screen and (min-width: $break-medium) {
+@media #{$small-only} {
+
+}
+
+@media #{$medium-up} {
 
 	.genesis-nav-menu {
 		text-align: left;
@@ -147,8 +151,30 @@ nav .wrap {
 
 }
 
-@media only screen and (min-width: $break-small) {
+@media #{$medium-only} {
 
+}
 
+@media #{$large-up}{
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
 
 }

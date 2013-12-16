@@ -133,55 +133,46 @@ var {
 	font-style: italic;
 }
 
-dt {
-	font-weight: 600;
-}
-
-dd {
-	margin: 0 0 1em 1em;
-}
-
 address {
 	margin-bottom: 26px;
 }
 
-/* Headings
---------------------------------------------- */
+@media #{$small-up} {
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: $heading-color;
-	font-weight: 700;
-	margin: 0;
-	margin-bottom: 16px;
-	padding: 0;
 }
 
-h1 {
-	@include adjust-font-size-to(36px);
+@media #{$small-only} {
+
 }
 
-h2 {
-	@include adjust-font-size-to(30px);
+@media #{$medium-up} {
+
 }
 
-h3 {
-	@include adjust-font-size-to(24px);
+@media #{$medium-only} {
+
 }
 
-h4 {
-	@include adjust-font-size-to(20px);
+@media #{$large-up}{
+
 }
 
-h5 {
-	@include adjust-font-size-to(18px);
+@media #{$large-only}{
+
 }
 
-h6 {
-	@include adjust-font-size-to(16px);
+@media #{$xlarge-up}{
+
 }
 
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
+}

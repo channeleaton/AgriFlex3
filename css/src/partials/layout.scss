@@ -69,11 +69,15 @@ footer .wrap {
 	@include grid-column(12);
 }
 
+@media #{$small-up} {
 
 }
 
-@media only screen and (min-width: $break-medium) {
+@media #{$small-only} {
 
+}
+
+@media #{$medium-up} {
 
 	.content {
 		@include grid-column(8);
@@ -146,7 +150,30 @@ footer .wrap {
 	}
 }
 
-@media only screen and (min-width: $break-large) {
+@media #{$medium-only} {
 
 }
 
+@media #{$large-up}{
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
+}
