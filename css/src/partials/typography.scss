@@ -1,19 +1,8 @@
 @import "compass/typography";
-$base-font-size: 16px;
-$base-line-height: 26px;
+/* Compass vertical rhythm */
+$base-font-size: $rem-base;
+$base-line-height: $rem-base * 1.5;
 @include establish-baseline( $base-font-size );
-
-
-// Import fonts
-// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
-
-body {
-	background-color: $body-background;
-	color: $body-font;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 300;
-	line-height: 1.625;
-}
 
 a,
 button,
@@ -38,46 +27,12 @@ a {
 
 a:hover {
 	color: $link-color-hover;
-}
-
-p {
-	@include break-text();
-	margin: 0;
-	@include margin-trailer();
-	padding: 0;
-}
-
-strong {
-	font-weight: 700;
-}
-
-em {
-	font-style: italic;
-}
-
-ol,
-ul {
-	margin: 0;
-	padding: 0;
-}
-
-blockquote,
-blockquote::before {
-	color: $blockquote-text;
+	text-decoration: underline;
 }
 
 blockquote {
 	margin: 40px 40px 24px;
-}
-
-blockquote::before {
-	content: "\201C";
-	display: block;
-	@include adjust-font-size-to(30px);
-	height: 0;
-	left: -20px;
-	position: relative;
-	top: -10px;
+	color: $blockquote-text;
 }
 
 code,
@@ -112,10 +67,6 @@ pre code {
 	white-space: pre-wrap;
 	background-color: transparent;
 	border: 0;
-}
-
-cite {
-	font-style: normal;
 }
 
 sup, sub {

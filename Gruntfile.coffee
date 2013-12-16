@@ -65,7 +65,7 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-contrib-watch'
 
   @registerTask 'default', ['coffee', 'compass']
-  @registerTask 'develop', ['compass', 'jshint', 'csslint', 'concat']
+  @registerTask 'develop', ['compass', 'jshint', 'concat']
   @registerTask 'package', ['default', 'cssmin', 'csslint']
 
   @event.on 'watch', (action, filepath) =>

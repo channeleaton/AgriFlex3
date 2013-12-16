@@ -5,7 +5,7 @@
 .entry-comments,
 .entry-pings {
 	background-color: $white;
-	margin-bottom: 40px;
+	@include margin-trailer()
 }
 
 .entry-comments,
