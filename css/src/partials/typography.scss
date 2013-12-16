@@ -21,25 +21,21 @@ textarea:focus,
 }
 
 a {
-	color: $link-color;
 	text-decoration: none;
 }
 
 a:hover {
-	color: $link-color-hover;
 	text-decoration: underline;
 }
 
 blockquote {
 	margin: 40px 40px 24px;
-	color: $blockquote-text;
 }
 
 code,
 pre {
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 	@include adjust-font-size-to(12px);
-	color: $code-text;
 	border: 1px solid $code-border;
 	background-color: $code-background;
 }

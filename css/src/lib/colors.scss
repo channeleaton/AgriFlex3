@@ -9,6 +9,21 @@ $gray-lighter: #e1e1e8;
 $gray-lightest: #f7f7f9;
 $white: #fff; // Because sometimes white isn't always white
 
+$primary-color: #008CBA;
+$secondary-color: #e7e7e7;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+
+/* Body
+--------------------------------------------- */
+$body-bg: $white;
+$body-font-color: $gray-medium;
+$code-color: $gray-dark;
+$code-border: $gray-lighter;
+$code-background: $gray-lightest;
+
 /* Header
 --------------------------------------------- */
 $header-background: $white;
@@ -21,42 +36,9 @@ $nav-text: $gray-dark;
 $nav-link: $gray-dark;
 $nav-sub-border: #eee;
 
-/* Body
---------------------------------------------- */
-$body-background: $white;
-$body-font: $gray-medium;
-$heading-color: $gray-dark;
-$blockquote-text: $gray-light;
-$code-text: $gray-dark;
-$code-border: $gray-lighter;
-$code-background: $gray-lightest;
-
-/* Links
---------------------------------------------- */
-$link-color: #008cba;
-$link-color-hover: darken($link-color, 10%);
-
-/* Forms
---------------------------------------------- */
-$form-field-text: $gray-dark;
-$form-field-border: #ddd;
-$form-field-border-focus: $gray-dark;
-$form-field-shadow: #eee;
-$form-button-hover: #f15123;
-$form-placeholder-text: $gray-dark;
-
-/* Tables
---------------------------------------------- */
-$table-border: #ddd;
-$table-stripe: #f9f9f9;
-$table-hover: #f5f5f5;
-$table-nested-background: $white;
-
 /* Pagination
 --------------------------------------------- */
-$pagination-link: $white;
-$pagination-link-background: $gray-light;
-$pagination-link-background-hover: #f15123;
+$pagination-font-color: $white;
 
 /* Comments
 --------------------------------------------- */
