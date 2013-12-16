@@ -9,11 +9,50 @@ class AgriFlex_Assets {
 
 	public function __construct() {
 
+		// Register all scripts used in the theme
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
+
+		// Enqueue global scripts
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_global_scripts' ) );
+		
 		// Register all styles used in the theme
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ) );
 
 		// Enqueue global styles
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_global_styles' ) );
+
+	}
+
+	public function register_scripts() {
+
+		wp_register_script( 'foundation',
+			AF_THEME_DIRURL . '/bower_components/foundation/js/foundation.js',
+			array( 'jquery' ),
+			false,
+			true
+		);
+
+		wp_register_script( 'foundation-topbar',
+			AF_THEME_DIRURL . '/bower_components/foundation/js/foundation/foundation.topbar.js',
+			array( 'foundation' ),
+			false,
+			true
+		);
+
+		wp_register_script( 'agriflex-public',
+			AF_THEME_DIRURL . '/js/src/public-foundation.js',
+			false,
+			false,
+			true
+		);
+
+	}
+
+	public function enqueue_global_scripts() {
+
+		wp_enqueue_script( 'foundation' );
+		wp_enqueue_script( 'foundation-topbar' );
+		wp_enqueue_script( 'agriflex-public' );
 
 	}
 

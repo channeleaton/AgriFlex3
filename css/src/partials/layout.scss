@@ -18,11 +18,12 @@ input[type="search"] {
 }
 
 header .wrap,
-nav .wrap,
 .site-inner .wrap,
+.top-bar-wrapper,
 footer .wrap {
 	@include grid-row();
 }
+
 
 /* Header
 --------------------------------------------- */
@@ -32,8 +33,14 @@ footer .wrap {
 
 /* Navigation
 --------------------------------------------- */
-.menu-primary, .menu-secondary {
-	@include grid-column(12);
+.top-bar-wrapper {
+	overflow: visible;
+}
+
+.contain-to-grid .top-bar {
+	max-width: none;
+	width: 100%;
+	// overflow: visible;
 }
 
 /* Content

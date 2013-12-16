@@ -44,6 +44,9 @@ class AgriFlex {
 		// Enqueue our assets
 		$af_assets = new AgriFlex_Assets;
 
+		// Fix the navigation
+		$af_navigation = new AgriFlex_Navigation;
+
 	}
 
 	/**

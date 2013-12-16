@@ -162,6 +162,7 @@ class AgriFlex_Genesis {
 
 	}
 
+
 	/**
 	 * Remove unneeded user profile fields
 	 * @since 1.0
