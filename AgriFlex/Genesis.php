@@ -111,7 +111,7 @@ class AgriFlex_Genesis {
 	public function html5shiv() { ?>
 
 		<!--[if lt IE 9]>
-	    <script type="text/javascript" src="<?php AF_THEME_DIRPATH . '/js/lib/html5shiv/dist/html5shiv.js'; ?>"></script>
+	    <script type="text/javascript" src="<?php AF_THEME_DIRPATH . '/bower_components/html5shiv/dist/html5shiv.js'; ?>"></script>
 		<![endif]-->
 
 	<?php
@@ -125,7 +125,7 @@ class AgriFlex_Genesis {
 	public function respond_js() { ?>
 
 		<!--[if lt IE 9]>
-	    <script type="text/javascript" src="<?php AF_THEME_DIRPATH . '/js/lib/respond/dest/respond.min.js'; ?>"></script>
+	    <script type="text/javascript" src="<?php AF_THEME_DIRPATH . '/bower_components/respond/dest/respond.min.js'; ?>"></script>
 		<![endif]-->
 
 	<?php
