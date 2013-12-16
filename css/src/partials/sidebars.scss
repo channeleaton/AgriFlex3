@@ -2,7 +2,6 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .sidebar {
-	@include margin-leader();
 
 	p:last-child {
 		margin-bottom: 0;
@@ -20,7 +19,6 @@
 
 	.widget {
 		background-color: $widget-background;
-		@include margin-trailer();
 		padding: 0;
 	}
 
@@ -34,24 +32,11 @@
 @media only screen and (min-width: $break-small) {
 	.sidebar {
 
-		.widget {
-			@include column(4);
-			@include margin-trailer();
-		}
-	}
 }
 
 @media only screen and (min-width: $break-medium) {
 
-	.sidebar {
-		margin-top: 0;
 
-		.widget {
-			@include column(12);
-			@include margin-trailer();
-		}
-	}
-	
 }
 
 @media only screen and (min-width: $break-large) {

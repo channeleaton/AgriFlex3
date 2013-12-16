@@ -2,7 +2,6 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	@include column(12);
 	background-color: $header-background;
 }
 
@@ -14,7 +13,6 @@
 --------------------------------------------- */
 
 .title-area {
-	@include column(12);
 	font-weight: 700;
 	float: left;
 	padding: 16px 0;
@@ -43,7 +41,6 @@
 
 .header-full-width .title-area,
 .header-full-width .site-title {
-	@include column(12);
 }
 
 
@@ -51,16 +48,10 @@
 --------------------------------------------- */
 
 .site-header .widget-area {
-	@include column(12);
 }
 
 .header-image .site-header .wrap {
 	background-position: center top;
-}
-
-.header-image .site-header .widget-area,
-.site-header {
-	padding: 20px;
 }
 
 .site-header ul.genesis-nav-menu,
@@ -100,11 +91,9 @@
 @media only screen and (min-width: $break-medium) {
 
 	.title-area {
-		@include column(4);
 	}
 
 	.site-header .widget-area {
-		@include column(8);
 		float: right;
 		text-align: right;
 	}

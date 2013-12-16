@@ -1,5 +1,8 @@
 /* Site Navigation
 ---------------------------------------------------------------------------------------------------- */
+nav .wrap {
+	overflow: visible;
+}
 
 .genesis-nav-menu .menu-item,
 .site-header ul.genesis-nav-menu {
@@ -113,12 +116,8 @@
 --------------------------------------------- */
 
 .nav-primary {
-	@include row(12);
-	float: left;
-	overflow: visible;
 
 	.wrap {
-		overflow: visible;
 	}
 	
 }
@@ -127,11 +126,8 @@
 --------------------------------------------- */
 
 .nav-secondary {
-	@include row(12);
-	overflow: visible;
 
 	.wrap {
-		overflow: visible;
 	}
 }
 
