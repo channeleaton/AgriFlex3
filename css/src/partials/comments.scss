@@ -39,10 +39,12 @@
 	}
 }
 
+.comment-list,
+.ping-list {
 
-.comment-list li,
-.ping-list li {
-	list-style-type: none;
+	li {
+		list-style-type: none;
+	}
 }
 
 .comment-list li {

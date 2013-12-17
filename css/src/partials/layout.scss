@@ -4,13 +4,6 @@ $row-width: rem-calc(1140);
 $column-gutter: rem-calc(32);
 $total-columns: 12;
 
-/* Box Sizing
---------------------------------------------- */
-*,
-input[type="search"] {
-	@include box-sizing(border-box);
-}
-
 /* Site Containers
 --------------------------------------------- */
 .site-container {
@@ -22,7 +15,6 @@ header .wrap,
 footer .wrap {
 	@include grid-row();
 }
-
 
 /* Header
 --------------------------------------------- */
@@ -78,9 +70,6 @@ footer .wrap {
 
 	.top-bar-wrapper {
 		@include grid-row();
-	}
-	
-	.top-bar-wrapper {
 		overflow: visible;
 	}
 

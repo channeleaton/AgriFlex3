@@ -1,26 +1,30 @@
 /* Gravity Forms
 --------------------------------------------- */
 
-div.gform_wrapper input[type="email"],
-div.gform_wrapper input[type="text"],
-div.gform_wrapper textarea,
-div.gform_wrapper .ginput_complex label {
-	@include adjust-font-size-to(16px);
-	padding: 5px 10px;
+div.gform_wrapper {
+
+	input[type="email"],
+	input[type="text"],
+	textarea,
+	.ginput_complex label {
+		@include adjust-font-size-to(16px);
+		padding: 5px 10px;
+	}
+
+	.ginput_complex label {
+		padding: 0;
+	}
+
+	li,
+	form li {
+		margin: 16px 0 0;
+	}
+
+	.gform_footer input[type="submit"] {
+		@include adjust-font-size-to(14px);
+	}
 }
 
-div.gform_wrapper .ginput_complex label {
-	padding: 0;
-}
-
-div.gform_wrapper li,
-div.gform_wrapper form li {
-	margin: 16px 0 0;
-}
-
-div.gform_wrapper .gform_footer input[type="submit"] {
-	@include adjust-font-size-to(14px);
-}
 
 @media #{$small-up} {
 

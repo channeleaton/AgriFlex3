@@ -3,68 +3,67 @@
 
 .site-header {
 	background-color: $header-background;
-}
 
-.site-header .wrap {
-}
+	/* Title Area
+	--------------------------------------------- */
 
-/* Title Area
---------------------------------------------- */
+	.title-area {
+		font-weight: 700;
+		float: left;
+		padding: 16px 0;
+	}
 
-.site-header .title-area {
-	font-weight: 700;
-	float: left;
-	padding: 16px 0;
-}
+	.site-title {
 
-.site-title {
-}
-
-.site-title a,
-.site-title a:hover {
-	color: $site-title;
-}
-
-.site-description {
-	color: $site-description;
-	@include adjust-font-size-to(16px);
-	font-weight: 300;
-	line-height: 1;
-	margin-bottom: 0;
-}
-
-/* Full width header, no widgets */
-
-.header-full-width .title-area,
-.header-full-width .site-title {
-}
+		a,
+		a:hover {
+			color: $site-title;
+		}
+	}
 
 
-/* Widget Area
---------------------------------------------- */
+	.site-description {
+		color: $site-description;
+		@include adjust-font-size-to(16px);
+		font-weight: 300;
+		line-height: 1;
+		margin-bottom: 0;
+	}
 
-.site-header .widget-area {
+	/* Full width header, no widgets */
+
+	.header-full-width .title-area,
+	.header-full-width .site-title {
+	}
+
+
+	/* Widget Area
+	--------------------------------------------- */
+
+	.widget-area {
+	}
+
+	ul.genesis-nav-menu,
+	.search-form {
+		float: none;
+	}
+
+	.site-description,
+	.title-area,
+	.search-form,
+	.site-title {
+		text-align: center;
+	}
+
+	.search-form {
+		float: right;
+		margin-top: 24px;
+	}
+
 }
 
 .header-image .site-header .wrap {
 	background-position: center top;
-}
-
-.site-header ul.genesis-nav-menu,
-.site-header .search-form {
-	float: none;
-}
-
-.site-description,
-.site-header .title-area,
-.site-header .search-form,
-.site-title {
-	text-align: center;
-}
-
-.site-header .search-form {
-	float: right;
-	margin-top: 24px;
 }
 
 
@@ -90,23 +89,26 @@
 
 @media #{$medium-up} {
 
-	.title-area {
-	}
+	.site-header {
 
-	.site-header .widget-area {
-		float: right;
-		text-align: right;
+		.title-area {
+		}
+
+		.widget-area {
+			float: right;
+			text-align: right;
+		}
+
+		.site-description,
+		.title-area,
+		.search-form,
+		.site-title {
+			text-align: left;
+		}
 	}
 
 	.header-image .site-header .widget-area {
 		padding: 40px 0;
-	}
-
-	.site-description,
-	.site-header .title-area,
-	.site-header .search-form,
-	.site-title {
-		text-align: left;
 	}
 
 }
