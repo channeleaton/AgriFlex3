@@ -54,7 +54,8 @@ footer .wrap {
 
 /* Sidebars
 --------------------------------------------- */
-.sidebar-primary {
+.sidebar-primary,
+.sidebar-secondary {
 	@include grid-column(12);
 }
 
@@ -79,17 +80,12 @@ footer .wrap {
 		overflow: visible;
 	}
 
-	.content {
-		@include grid-column(8);
-	}
-
 	.sidebar-primary,
 	.sidebar-secondary {
-		@include grid-column(4);
-	}
 
-	.sidebar-content .sidebar-primary {
-		float: left;
+		.widget {
+			@include grid-column(4);
+		}
 	}
 
 	.one-half,
@@ -151,6 +147,23 @@ footer .wrap {
 }
 
 @media #{$large-up}{
+
+	.content {
+		@include grid-column(8);
+	}
+
+	.sidebar-primary,
+	.sidebar-secondary {
+		@include grid-column(4);
+
+		.widget {
+			@include grid-column(12);
+		}
+	}
+
+	.sidebar-content .sidebar-primary {
+		float: left;
+	}
 
 }
 
