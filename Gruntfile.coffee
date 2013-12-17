@@ -51,10 +51,10 @@ module.exports = (grunt) ->
       src: ['css/*.css']
     concat:
       adminjs:
-        src: ['js/src/admin-*.js']
+        src: ['js/src/admin/*.js']
         dest: 'js/admin.min.js'
       publicjs:
-        src: ['js/src/public-*.js']
+        src: ['js/src/public/*.js']
         dest: 'js/public.min.js'
 
   @loadNpmTasks 'grunt-contrib-coffee'

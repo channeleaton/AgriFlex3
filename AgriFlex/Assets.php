@@ -40,7 +40,7 @@ class AgriFlex_Assets {
 		);
 
 		wp_register_script( 'agriflex-public',
-			AF_THEME_DIRURL . '/js/src/public-foundation.js',
+			AF_THEME_DIRURL . '/js/src/public.min.js',
 			false,
 			false,
 			true
