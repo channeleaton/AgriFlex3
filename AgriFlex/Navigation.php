@@ -20,7 +20,9 @@ class AgriFlex_Navigation {
 		$args['menu_class'] = $args['menu_class'] . ' left';
 		$args['walker'] = new AgriFlex_CustomNavigationWalker;
 
-		$nav = '<section class="top-bar-section">' . wp_nav_menu( $args ) . '</section>';
+		$title = '<ul class="title-area"><li class="name"></li><li class="toggle-topbar menu-icon"><a><span></span></a></ul>';
+
+		$nav = $title . '<section class="top-bar-section">' . wp_nav_menu( $args ) . '</section>';
 
 		$nav_markup_open = genesis_markup( array(
 				'html5' => '<div class="top-bar-wrapper contain-to-grid"><nav class="nav-primary top-bar" data-topbar>',
