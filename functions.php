@@ -47,6 +47,9 @@ class AgriFlex {
 		// Fix the navigation
 		$af_navigation = new AgriFlex_Navigation;
 
+        // Add AgriLife Required DOM Elements
+        $af_required = new AgriFlex_RequiredDOM;
+
 	}
 
 	/**

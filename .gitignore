@@ -47,3 +47,15 @@ js/admin.min.js
 # Ignore dependencies using package control
 node_modules/*
 bower_components/*
+css/lib/colors.css
+css/lib/functions.css
+css/lib/grid.css
+css/lib/mixins.css
+css/lib/settings.css
+css/lib/variables.css
+css/partials/*.css
+css/src/default.css
+css/src/ext.css
+css/src/lib/colors-ext.css
+css/src/partials/header-ext.css
+css/src/partials/header-ext.scss

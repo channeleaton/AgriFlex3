@@ -1,12 +1,12 @@
-// Set default agency flag
-$agency-type: "agrilife";
+// Set Extension flag
+$agency-type: "extension";
 
 // Import compass parts
 @import "compass";
 @import "compass/reset";
 
 // Import SASS components
-@import "lib/colors";
+@import "lib/colors-ext"; // ext
 @import "lib/variables";
 @import "lib/mixins";
 @import "lib/functions";
@@ -23,7 +23,7 @@ $agency-type: "agrilife";
 @import "partials/wordpress";
 
 // Section/page-specific CSS
-@import "partials/header";
+@import "partials/header-ext";  // ext
 @import "partials/navigation";
 @import "partials/content";
 @import "partials/comments";

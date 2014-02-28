@@ -25,7 +25,7 @@ class AgriFlex_Navigation {
 		$nav = $title . '<section class="top-bar-section">' . wp_nav_menu( $args ) . '</section>';
 
 		$nav_markup_open = genesis_markup( array(
-				'html5' => '<div class="top-bar-wrapper contain-to-grid"><nav class="nav-primary top-bar" data-topbar>',
+				'html5' => '<div class="top-bar-wrapper contain-to-grid"><nav class="nav-primary top-bar" data-topbar data-options="is_hover: false">',
 				'xhtml' => '<div id="nav">',
 				'context' => 'nav-primary',
 				'echo' => false,

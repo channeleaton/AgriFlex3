@@ -6,6 +6,7 @@ $total-columns: 12;
 
 /* Site Containers
 --------------------------------------------- */
+
 .site-container {
 	position: relative;
 }
@@ -16,6 +17,13 @@ footer .wrap {
 	@include grid-row();
 }
 
+.site-inner .wrap {
+  background-color: $white;
+}
+
+body {
+  background-color: $gray-lighter;
+}
 /* Header
 --------------------------------------------- */
 .site-header .title-area {
@@ -24,6 +32,15 @@ footer .wrap {
 
 /* Navigation
 --------------------------------------------- */
+
+/* Breadcrumbs
+--------------------------------------------- */
+.breadcrumb {
+  border-bottom: 1px solid $gray-lighter;
+  margin-left: 0.9375rem;
+  margin-right: 0.9375rem;
+  padding: 1em 0;
+}
 
 /* Content
 --------------------------------------------- */
@@ -69,9 +86,10 @@ footer .wrap {
 
 @media #{$medium-up} {
 
-	.top-bar-wrapper {
+    .top-bar-wrapper {
 		@include grid-row();
 		overflow: visible;
+        margin-bottom: 1em;
 	}
 
 	.contain-to-grid .top-bar {
@@ -79,6 +97,10 @@ footer .wrap {
 		width: 100%;
 		overflow: visible;
 	}
+
+    .site-inner .wrap {
+      border-top: 10px solid $primary-color;
+    }
 
 	.sidebar-primary,
 	.sidebar-secondary {

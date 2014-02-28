@@ -1,3 +1,26 @@
 /* Typography */
+$body-font-family:  "jaf-facitweb",sans-serif !default; //"droid-serif",serif;
 $body-font-weight: 300;
 $paragraph-font-weight: 300;
+
+/*
+$body-bg: #fff !default;
+$body-font-color: #222 !default;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$body-font-weight: normal !default;
+$body-font-style: normal !default;
+*/
+
+$paragraph-font-family: "droid-serif",serif;
+//$paragraph-font-weight: $paragraph-font-weight;
+
+$header-font-family: "jaf-facitweb",sans-serif !default;
+$header-font-weight: 600 !default;
+$header-font-style: normal;
+
+$footer-font-family: 'jaf-facitweb',sans-serif !default;
+$footer-font-weight: 300;
+
+// Font for the top bar
+$topbar-link-font-family: "jaf-facitweb",sans-serif !default;
+$topbar-link-weight: 300;

@@ -27,6 +27,9 @@ class AgriFlex_Assets {
 		// Enqueue global styles
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_global_styles' ) );
 
+        // Bring in typekit
+        add_action( 'wp_head', array( $this, 'add_typekit' ));
+
 	}
 
 	/**
@@ -57,6 +60,13 @@ class AgriFlex_Assets {
 			true
 		);
 
+        wp_register_script( 'modernizr',
+            AF_THEME_DIRURL . '/bower_components/modernizr/modernizr.js',
+            array( 'jquery' ),
+            false,
+            true
+        );
+
 	}
 
 	/**
@@ -69,6 +79,7 @@ class AgriFlex_Assets {
 		wp_enqueue_script( 'foundation' );
 		wp_enqueue_script( 'foundation-topbar' );
 		wp_enqueue_script( 'agriflex-public' );
+        wp_enqueue_script( 'modernizr' );
 
 	}
 
@@ -129,5 +140,26 @@ class AgriFlex_Assets {
 		wp_enqueue_style( 'default-styles' );
 
 	}
+
+    /**
+     * Add the correct Typekit
+     * @since 1.0
+     * @todo Replace with async js and deal with FOUC
+     * @return string
+     */
+    public function add_typekit() {
+
+        // For Extension
+        $key = 'xox0blb';
+
+        if( !is_admin() ) :
+            ?>
+            <script type="text/javascript" src="//use.typekit.net/<?php echo $key; ?>.js"></script>
+            <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+            <?php
+        endif;
+
+    }
+
 
 }
