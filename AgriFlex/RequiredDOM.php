@@ -157,7 +157,7 @@ class AgriFlex_RequiredDOM
 		            <li class="tvmdl-item"><a href="http://tvmdl.tamu.edu/"><span>Texas A&amp;M Veterinary Medical Diagnostics Laboratory</span></a></li>
 		            <li class="ext-item"><a href="http://agrilifeextension.tamu.edu/"><span>Texas A&amp;M AgriLife Extension Service</span></a></li>
 		            <li class="res-item"><a href="http://agriliferesearch.tamu.edu/"><span>Texas A&amp;M AgriLife Research</span></a></li>
-		            <li class="agrilife-item"><a href="http://agrilife.org/"><span>Texas A&amp;M AgriLife</span></a></li>
+		            <li class="college-item"><a href="http://aglifesciences.tamu.edu/"><span>Texas A&amp;M College of Agrculture and Life Sciences</span></a></li>
 		        </ul>
 		    </div>
 		  </div>
