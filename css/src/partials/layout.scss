@@ -22,7 +22,11 @@ footer .wrap {
 }
 
 body {
-  background-color: $gray-lighter;
+  background-color: #ffffff; // Old browsers
+  @include filter-gradient(#ffffff, #d4d4d4, vertical); // IE6-8
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top, #ffffff 0%,#ffffff 10%,#d4d4d4 29%,#d4d4d4 100%));
 }
 /* Header
 --------------------------------------------- */
@@ -76,6 +80,7 @@ body {
 	@include grid-column(12);
 }
 
+
 @media #{$small-up} {
 
 }
@@ -87,19 +92,33 @@ body {
 @media #{$medium-up} {
 
     .top-bar-wrapper {
-		@include grid-row();
-		overflow: visible;
-        margin-bottom: 1em;
-	}
-
-	.contain-to-grid .top-bar {
-		max-width: none;
+		//@include grid-row();
 		width: 100%;
-		overflow: visible;
+        overflow: visible;
+        background: transparent;
 	}
 
-    .site-inner .wrap {
-      border-top: 10px solid $primary-color;
+	.contain-to-grid {
+      .top-bar {
+        max-width: 71.25rem;
+        width: 100%;
+        overflow: visible;
+        margin: 0 auto;
+        background: $gray-light;
+        li a:not(.button) {
+          background: $gray-light;
+        }
+        .top-bar-section ul {
+          background: $gray-light;
+          li > a {
+            background: $gray-light;
+          }
+        }
+	  }
+    }
+
+    .site-inner  {
+        @include grid-row();
     }
 
 	.sidebar-primary,
@@ -170,13 +189,26 @@ body {
 
 @media #{$large-up}{
 
+  .top-bar-wrapper {
+    margin-bottom: 1em;
+  }
+
 	.content {
 		@include grid-column(8);
+        margin: 2% 0;
 	}
+
+    .site-inner  {
+      @include inner-background($inner-background-img,$inner-background-size,$inner-background-offset);
+      .wrap {
+        margin-top: 55px;
+      }
+    }
 
 	.sidebar-primary,
 	.sidebar-secondary {
 		@include grid-column(4);
+        margin: 2% 0;
 
 		.widget {
 			@include grid-column(12);

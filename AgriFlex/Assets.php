@@ -135,8 +135,6 @@ class AgriFlex_Assets {
 	 */
 	public function enqueue_global_styles() {
 
-		global $wp_styles;
-
 		wp_enqueue_style( 'default-styles' );
 
 	}
@@ -145,12 +143,16 @@ class AgriFlex_Assets {
      * Add the correct Typekit
      * @since 1.0
      * @todo Replace with async js and deal with FOUC
+     * @todo Pass in variable (TBD) to select correct kit
      * @return string
      */
     public function add_typekit() {
 
         // For Extension
         $key = 'xox0blb';
+
+        // For Default Ariflex3
+        $key = 'mtx5vmp';
 
         if( !is_admin() ) :
             ?>

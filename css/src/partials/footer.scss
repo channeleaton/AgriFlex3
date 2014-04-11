@@ -12,6 +12,13 @@
     weight: $footer-font-weight;
   }
 
+    ul {
+      font: {
+        family: $footer-font-family;
+        weight: $footer-font-weight;
+      }
+    }
+
     .footer-tamus {
       border: 2px solid $white;
     }
@@ -21,7 +28,7 @@
 	}
 
     a {
-      color: $white;
+      color: $footer-text;
     }
 
 	.footer-widgets .widget-area {

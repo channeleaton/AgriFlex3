@@ -4,13 +4,13 @@
 --------------------------------------------- */
 $gray-dark: #333;
 $gray-medium: #5E564E;
-$gray-light: #999;
+$gray-light: #717074;
 $gray-lighter: #d6d6d6;
 $gray-lightest: #f7f7f9;
 $white: #f8f8f8; // Because sometimes white isn't always white
 
 $primary-color: #500000;
-$secondary-color: #e7e7e7;
+$secondary-color: #9C7D0D; //#e7e7e7;
 $alert-color: #f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
@@ -47,7 +47,7 @@ $comment-background: #f5f5f5;
 
 /* Widgets
 --------------------------------------------- */
-$widget-background: $white;
+$widget-background: #f2eddd; //$white;
 $widget-entry: #f5f5f5;
 $widget-footer-background: $gray-light;
 $widget-footer-text: $gray-dark;
@@ -58,4 +58,4 @@ $widget-footer-form-border: #ddd;
 /* Footer
 --------------------------------------------- */
 $footer-text: $white;
-$footer-background: $primary-color;
+$footer-background: $gray-light; //$primary-color;

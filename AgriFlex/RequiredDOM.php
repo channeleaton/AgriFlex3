@@ -193,7 +193,7 @@ class AgriFlex_RequiredDOM
 		        </ul>
             </div>
             <div class="column medium-2">
-                <a href="http://tamus.edu/" title="Texas A&M University System"><img class="footer-tamus" data-interchange="[//agrilifecdn.tamu.edu/wp-content/themes/AgriLife-Beta/images/footer-tamus.png, (default)], [//www.tamus.edu/assets/Vertical-Logo.png, (retina)]" title="Texas A&M University System Member" alt="Texas A&M University System Member" /><noscript><img src="//agrilifecdn.tamu.edu/wp-content/themes/AgriLife-Beta/images/footer-tamus.png" title="Texas A&M University System Member" alt="Texas A&M University System Member" /></noscript></a>
+                <a href="http://tamus.edu/" title="Texas A&M University System"><img class="footer-tamus" src="'.AF_THEME_DIRURL.'/img/footer-tamus-maroon.png" title="Texas A&M University System Member" alt="Texas A&M University System Member" /><noscript><img src="//agrilifecdn.tamu.edu/wp-content/themes/AgriLife-Beta/images/footer-tamus.png" title="Texas A&M University System Member" alt="Texas A&M University System Member" /></noscript></a>
             </div>';
 
         echo $output;

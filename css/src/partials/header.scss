@@ -71,6 +71,7 @@
   .search-form {
     float: right;
     margin-top: 24px;
+    overflow: hidden;
   }
 
 }
@@ -155,6 +156,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     .site-title {
       text-align: left;
     }
+
   }
 
   .header-image .site-header .widget-area {
@@ -254,6 +256,42 @@ only screen and (min-device-pixel-ratio: 1.5) {
           }
         }
 
+      }
+    }
+  }
+
+  .search-form {
+    float: right;
+    max-height: none;
+    margin: 0.1em 0 0 0;
+    .is-vishidden {
+      @include visuallyhidden;
+    }
+
+    input[type="search"]{
+      width: 100%;
+      border: 1px solid gray;
+      padding: 0.1em .3em;
+    }
+    fieldset {
+      position: relative;
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .search-submit {
+      background: none;
+      padding: 0.78em 1em;
+      border: 0;
+      border-left: 1px solid gray;
+      color: gray;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: auto;
+      .icon-search:before {
+        content: "\73";
       }
     }
   }
