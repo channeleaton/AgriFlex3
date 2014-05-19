@@ -1,3 +1,6 @@
 {
-	"servers" : [ "extension" ]
+	"servers" : [ "extension" ],
+	"composer" : false,
+	"bower" : true,
+	"grunt" : true
 }
