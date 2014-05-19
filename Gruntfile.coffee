@@ -3,20 +3,31 @@ module.exports = (grunt) ->
     pkg: @file.readJSON('package.json')
     watch:
       files: [
-        'js/src/coffee/**.coffee',
-        'js/src/*.js',
+        'js/src/admin/coffee/**.coffee',
+        'js/src/public/coffee/**.coffee',
+        'js/src/admin/*.js',
+        'js/src/public/*.js',
         '**/*.scss'
       ]
       tasks: ['develop']
     coffee:
-      compile:
+      compileAdmin:
         options:
           bare: true
           sourceMap: true
         expand: true
-        cwd: '/js/src/coffee'
+        cwd: 'js/src/admin/coffee'
         src: ['*.coffee']
-        dest: '/js/src/'
+        dest: 'js/src/admin/'
+        ext: '.js'
+      compilePublic:
+        options:
+          bare: true
+          sourceMap: true
+        expand: true
+        cwd: 'js/src/public/coffee'
+        src: ['*.coffee']
+        dest: 'js/src/public/'
         ext: '.js'
     compass:
       dist:
@@ -24,7 +35,7 @@ module.exports = (grunt) ->
           config: 'config.rb'
           specify: ['css/src/*.scss']
     jshint:
-      files: ['js/src/*.js']
+      files: ['js/src/admin/*.js', 'js/src/public/*.js']
       options:
         globals:
           jQuery: true
@@ -51,10 +62,10 @@ module.exports = (grunt) ->
       src: ['css/*.css']
     concat:
       adminjs:
-        src: ['js/src/admin-*.js']
+        src: ['js/src/admin/*.js']
         dest: 'js/admin.min.js'
       publicjs:
-        src: ['js/src/public-*.js']
+        src: ['js/src/public/*.js']
         dest: 'js/public.min.js'
 
   @loadNpmTasks 'grunt-contrib-coffee'
@@ -65,7 +76,7 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-contrib-watch'
 
   @registerTask 'default', ['coffee', 'compass']
-  @registerTask 'develop', ['compass', 'jshint', 'csslint', 'concat']
+  @registerTask 'develop', ['compass', 'coffee:compilePublic', 'coffee:compileAdmin', 'jshint', 'concat']
   @registerTask 'package', ['default', 'cssmin', 'csslint']
 
   @event.on 'watch', (action, filepath) =>

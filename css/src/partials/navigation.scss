@@ -1,124 +1,12 @@
-/* Site Navigation
----------------------------------------------------------------------------------------------------- */
-
-.genesis-nav-menu .menu-item,
-.site-header ul.genesis-nav-menu {
-	float: none;
-}
-
-.genesis-nav-menu {
-	text-align: center;
-}
-
-.genesis-nav-menu {
-	clear: both;
-	color: $nav-text;
-	line-height: 1.5;
-
-	.menu-item {
-		list-style: none;
-
-		&:hover,
-		&:active {
-			position: static;
-
-			> .sub-menu {
-				left: auto;
-				opacity: 1;
-			}
-		}
-
-	}
-
-	a {
-		border: none;
-		color: $nav-link;
-		display: block;
-		padding: 28px 24px;
-		position: relative;
-
-		&:hover,
-		&:active,
-		.current-menu-item > a,
-		.sub-menu .current-menu-item > a:hover,
-		.sub-menu .current-menu-item > a:active {
-			color: $gray-light;
-		}
-	}
-
-	.sub-menu .current-menu-item > a {
-		color: $gray-dark;
-	}
-
-	> .menu-item > a {
-		text-transform: uppercase;
-	}
-
-	.sub-menu {
-		left: -9999px;
-		opacity: 0;
-		position: absolute;
-		@include single-transition(opacity, .4s, ease-in-out);
-		width: 200px;
-		z-index: 99;
-
-		a {
-			background-color: $white;
-			border: 1px solid $nav-sub-border;
-			border-top: none;
-			font-size: 14px;
-			padding: 16px 20px;
-			position: relative;
-			width: 200px;
-		}
-
-		.sub-menu {
-			margin: -54px 0 0 199px;
-		}
-	}
-
-
-
-	> .first > a {
-		padding-left: 0;
-	}
-
-	> .last > a {
-		padding-right: 0;
-	}
-
-	> .right {
-		float: right;
-		list-style-type: none;
-		padding: 28px 0;
-		text-transform: uppercase;
-	}
-
-	> .right > a {
-		display: inline;
-		padding: 0;
-	}
-
-	> .rss > a {
-		margin-left: 48px;
-	}
-
-	> .search {
-		padding: 14px 0 0;
-	}
-}
-
-
 /* Primary Navigation
 --------------------------------------------- */
 
 .nav-primary {
-	@include row(12);
-	float: left;
-	overflow: visible;
 
+  .top-bar-section ul li > a {
+    text-transform: uppercase;
+  }
 	.wrap {
-		overflow: visible;
 	}
 	
 }
@@ -127,32 +15,47 @@
 --------------------------------------------- */
 
 .nav-secondary {
-	@include row(12);
-	overflow: visible;
 
 	.wrap {
-		overflow: visible;
 	}
 }
 
-@media only screen and (min-width: $break-large) {
+@media #{$small-up} {
 
 }
 
-@media only screen and (min-width: $break-medium) {
-
-	.genesis-nav-menu {
-		text-align: left;
-
-		.menu-item {
-			float: left;
-		}
-	}
+@media #{$small-only} {
 
 }
 
-@media only screen and (min-width: $break-small) {
+@media #{$medium-up} {
 
+}
 
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up}{
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
 
 }

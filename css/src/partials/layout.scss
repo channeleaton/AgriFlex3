@@ -1,61 +1,53 @@
-/* Setup column dimensions
+/* Setup grid dimensions
 --------------------------------------------- */
-$columns: 12;
-$column-width: 60;
-$gutter-width: 20;
-$total-width: 100%;
-
-/* Box Sizing
---------------------------------------------- */
-*,
-input[type="search"] {
-	@include box-sizing(border-box);
-}
+$row-width: rem-calc(1140);
+$column-gutter: rem-calc(32);
+$total-columns: 12;
 
 /* Site Containers
 --------------------------------------------- */
+
 .site-container {
 	position: relative;
 }
 
-.wrap {
-	position: relative;
-	margin: 0 auto;
-	max-width: $site-width;
+header .wrap,
+.site-inner .wrap,
+footer .wrap {
+	@include grid-row();
 }
 
-.site-inner {
-	@include column(12);
-}
-
-.full-width-content .content {
-	@include column(12);
-	
-}
-
-.content-sidebar-wrap {
+.site-inner .wrap {
+  background-color: $white;
 }
 
 body {
-	background-color: $white;
+  background-color: #ffffff; // Old browsers
+  @include filter-gradient(#ffffff, #d4d4d4, vertical); // IE6-8
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top, #ffffff 0%,#ffffff 10%,#d4d4d4 29%,#d4d4d4 100%));
+}
+/* Header
+--------------------------------------------- */
+.site-header .title-area {
+	@include grid-column(12);
 }
 
-.wrap {
-	@include row(12);
-	padding: 20px 0;
-	margin: 0 auto;
+/* Navigation
+--------------------------------------------- */
+
+/* Breadcrumbs
+--------------------------------------------- */
+.breadcrumb {
+  border-bottom: 1px solid $gray-lighter;
+  margin-left: 0.9375rem;
+  margin-right: 0.9375rem;
+  padding: 1em 0;
 }
 
-.site-inner {
-	@include column(12);
-}
-
-.content,
-.sidebar-primary,
-.sidebar-secondary, {
-	padding: 0 2.5%;
-}
-
+/* Content
+--------------------------------------------- */
 .content,
 .five-sixths,
 .four-fifths,
@@ -74,66 +66,91 @@ body {
 .two-thirds,
 .sidebar-primary,
 .sidebar-secondary {
-	@include column(12);
-	margin: 0;
+	@include grid-column(12);
 }
 
-@media only screen and (min-width: $break-small) {
+.full-width-content .content {
+	@include grid-column(12);
+}
 
-	.content {
-		padding: 0;
-	}
+/* Sidebars
+--------------------------------------------- */
+.sidebar-primary,
+.sidebar-secondary {
+	@include grid-column(12);
+}
+
+
+@media #{$small-up} {
 
 }
 
-@media only screen and (min-width: $break-medium) {
+@media #{$small-only} {
 
-	.content {
-		// float: right;
-		@include column(8);
+}
+
+@media #{$medium-up} {
+
+    .top-bar-wrapper {
+		//@include grid-row();
+		width: 100%;
+        overflow: visible;
+        background: transparent;
 	}
 
-	.content-sidebar .content {
-		float: left;
-	}
+	.contain-to-grid {
+      .top-bar {
+        max-width: 71.25rem;
+        width: 100%;
+        overflow: visible;
+        margin: 0 auto;
+        background: $gray-light;
+        li a:not(.button) {
+          background: $gray-light;
+        }
+        .top-bar-section ul {
+          background: $gray-light;
+          li > a {
+            background: $gray-light;
+          }
+        }
+	  }
+    }
+
+    .site-inner  {
+        @include grid-row();
+    }
 
 	.sidebar-primary,
 	.sidebar-secondary {
-		// float: right;
-		@include column(4);
+
+		.widget {
+			@include grid-column(4);
+		}
 	}
-
-
-
-	.sidebar-content .sidebar-primary {
-		float: left;
-	}
-
-	/* Column Classes - Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
-	--------------------------------------------- */
 
 	.one-half,
 	.three-sixths,
 	.two-fourths {
-		@include column(6);
+		@include grid-column(6);
 	}
 	 
 	.one-third,
 	.two-sixths {
-		@include column(4);
+		@include grid-column(4);
 	}
 	 
 	.four-sixths,
 	.two-thirds {
-		@include column(8);
+		@include grid-column(8);
 	}
 	 
 	.one-fourth {
-		@include column(3);
+		@include grid-column(3);
 	}
 	 
 	.three-fourths {
-		@include column(9);
+		@include grid-column(9);
 	}
 	 
 	.one-fifth {
@@ -157,20 +174,69 @@ body {
 	}
 	 
 	.one-sixth {
-		@include column(2);
+		@include grid-column(2);
 	}
 	 
 	.five-sixths {
-		@include column(10);
+		@include grid-column(10);
 	}
-	 
-	.first {
-		clear: both;
-		margin-left: 0;
-	}
-}
-
-@media only screen and (min-width: $break-large) {
 
 }
 
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up}{
+
+  .top-bar-wrapper {
+    margin-bottom: 1em;
+  }
+
+	.content {
+		@include grid-column(8);
+        margin: 2% 0;
+	}
+
+    .site-inner  {
+      @include inner-background($inner-background-img,$inner-background-size,$inner-background-offset);
+      .wrap {
+        margin-top: 55px;
+      }
+    }
+
+	.sidebar-primary,
+	.sidebar-secondary {
+		@include grid-column(4);
+        margin: 2% 0;
+
+		.widget {
+			@include grid-column(12);
+		}
+	}
+
+	.sidebar-content .sidebar-primary {
+		float: left;
+	}
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
+}

@@ -2,7 +2,6 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .sidebar {
-	@include margin-leader();
 
 	p:last-child {
 		margin-bottom: 0;
@@ -19,9 +18,32 @@
 	}
 
 	.widget {
-		background-color: $widget-background;
-		@include margin-trailer();
-		padding: 0;
+      h4 {
+        font-size: .8em;
+        margin-bottom: 1em;
+        letter-spacing: 2px;
+        background: url("../img/bg-titles.png") top right no-repeat transparent;
+        background-size: 1024px;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 1em 0;
+      }
+
+
+      &:nth-child(4n+1) h4.widget-title {
+        background-position: right -120px;
+      }
+
+      &:nth-child(4n+2) h4.widget-title {
+        background-position: right -180px;
+      }
+
+      /*&:nth-child(4n+3) h4.widget-title {
+        background-position: right -61px;
+        color: $gray-medium;
+      }*/
+
 	}
 
 	&.sidebar-primary {
@@ -31,29 +53,61 @@
 	}
 }
 
-@media only screen and (min-width: $break-small) {
-	.sidebar {
+@media #{$small-up} {
 
-		.widget {
-			@include column(4);
-			@include margin-trailer();
-		}
-	}
 }
 
-@media only screen and (min-width: $break-medium) {
+@media #{$small-only} {
 
-	.sidebar {
-		margin-top: 0;
-
-		.widget {
-			@include column(12);
-			@include margin-trailer();
-		}
-	}
-	
 }
 
-@media only screen and (min-width: $break-large) {
+@media #{$medium-up} {
+  .widget-wrap {
+    padding: 1em;
+    background: $sidebar-background;
+  }
+  .sidebar {
+    &.sidebar-primary .widget,
+    &.sidebar-secondary .widget{
+      width: 50%;
+      padding-bottom: 1rem;
+    }
+  }
+
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up}{
+  .sidebar {
+    &.sidebar-primary .widget,
+    &.sidebar-secondary .widget{
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
 
 }

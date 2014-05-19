@@ -5,7 +5,7 @@
 --------------------------------------------- */
 
 .entry {
-	margin-bottom: 40px;
+	@include margin-trailer();
 }
 
 .entry-content {
@@ -24,6 +24,14 @@
 	ol,
 	ul {
 		margin-left: 40px;
+
+		&.list-unstyled {
+			margin-left: 20px;
+
+			> li {
+				list-style: none;
+			}
+		}
 	}
 
 	ol li {
@@ -37,16 +45,6 @@
 	ol ol,
 	ul ul {
 		margin-bottom: 0;
-	}
-
-	ul.list-unstyled,
-	ol.list-unstyled {
-		margin-left: 20px;
-	}
-
-	ul.list-unstyled > li,
-	ol.list-unstyled > li {
-		list-style: none;
 	}
 
 	.search-form {
@@ -91,31 +89,55 @@
 	li {
 		display: inline;
 		a {
-			background-color: $pagination-link-background;
-			color: $pagination-link;
 			cursor: pointer;
 			display: inline-block;
 			padding: 8px 12px;
 
 			&:hover {
-				background-color: $pagination-link-background-hover;
 			}
 		}
 
 		&.active a {
-			background-color: $pagination-link-background-hover;
 		}
 	}
 }
 
-@media only screen and (min-width: $break-large) {
+@media #{$small-up} {
 
 }
 
-@media only screen and (min-width: $break-medium) {
-	
+@media #{$small-only} {
+
 }
 
-@media only screen and (min-width: $break-small) {
-	
+@media #{$medium-up} {
+
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up}{
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
 }

@@ -2,127 +2,326 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	@include column(12);
-	background-color: $header-background;
-}
 
-.site-header .wrap {
-	// padding: 40px 0;
-}
+  /* Title Area
+  --------------------------------------------- */
 
-/* Title Area
---------------------------------------------- */
+  .title-area {
+    font-weight: 700;
+    float: left;
+    padding: 16px 0;
+  }
+/*
+  .site-title {
+      margin: 0;
 
-.title-area {
-	@include column(12);
-	font-weight: 700;
-	float: left;
-	padding: 16px 0;
-}
-
-.site-title {
-	@include adjust-font-size-to(28px);
-	margin: 0 0 8px;
-	text-transform: uppercase;
-}
-
-.site-title a,
-.site-title a:hover {
-	color: $site-title;
-}
-
-.site-description {
-	color: $site-description;
-	@include adjust-font-size-to(16px);
-	font-weight: 300;
-	line-height: 1;
-	margin-bottom: 0;
-}
-
-/* Full width header, no widgets */
-
-.header-full-width .title-area,
-.header-full-width .site-title {
-	@include column(12);
-}
+      a {
+        display: block;
+        background-image: url(//agrilife.org/wp-content/themes/AgriLife-Beta/images/logo-ext.png)!important;
+        background-repeat: no-repeat;
+        width: 127px;
+        height: 48px;
 
 
-/* Widget Area
---------------------------------------------- */
+        span {
+          display: none;
+        }
+      }
 
-.site-header .widget-area {
-	@include column(12);
+
+    a,
+    a:hover {
+      color: $site-title;
+    }
+  }
+  */
+
+  .site-description {
+    color: $site-description;
+    @include adjust-font-size-to(16px);
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  /* Full width header, no widgets */
+
+  .header-full-width .title-area,
+  .header-full-width .site-title {
+  }
+
+  /* Widget Area
+  --------------------------------------------- */
+
+  .widget-area {
+  }
+
+  ul.genesis-nav-menu,
+  .search-form {
+    float: none;
+  }
+
+  .site-description,
+  .title-area,
+  .search-form,
+  .site-title {
+    text-align: center;
+  }
+
+  .search-form {
+    float: right;
+    margin-top: 24px;
+    overflow: hidden;
+  }
+
 }
 
 .header-image .site-header .wrap {
-	background-position: center top;
+  background-position: center top;
 }
-
-.header-image .site-header .widget-area,
-.site-header {
-	padding: 20px;
-}
-
-.site-header ul.genesis-nav-menu,
-.site-header .search-form {
-	float: none;
-}
-
-.site-description,
-.site-header .title-area,
-.site-header .search-form,
-.site-title {
-	text-align: center;
-}
-
-.site-header .search-form {
-	float: right;
-	margin-top: 24px;
-}
-
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	only screen and (-moz-min-device-pixel-ratio: 1.5),
-	only screen and (-o-min-device-pixel-ratio: 3/2),
-	only screen and (min-device-pixel-ratio: 1.5) {
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
 
-	.header-image .site-header .wrap {
-		background: url(images/logo@2x.png) no-repeat left;
-		background-size: 360px 164px;
-	}
-
-}
-
-@media only screen and (min-width: $break-small) {
+  .header-image .site-header .wrap {
+    background: url(images/logo@2x.png) no-repeat left;
+    background-size: 360px 164px;
+  }
 
 }
 
-@media only screen and (min-width: $break-medium) {
-
-	.title-area {
-		@include column(4);
-	}
-
-	.site-header .widget-area {
-		@include column(8);
-		float: right;
-		text-align: right;
-	}
-
-	.header-image .site-header .widget-area {
-		padding: 40px 0;
-	}
-
-	.site-description,
-	.site-header .title-area,
-	.site-header .search-form,
-	.site-title {
-		text-align: left;
-	}
+@media #{$small-up} {
 
 }
 
-@media only screen and (min-width: $break-large) {
+@media #{$small-only} {
 
 }
 
+@media #{$medium-up} {
+
+  #imageView {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+  }
+  .site-header {
+
+    /*.title-area {
+      padding: 0;
+      float: none;
+      width: $row-width;
+      background-color: transparent;
+      position: absolute;
+      z-index: 0;
+      top: -1 * $container-top-margin - 42px;
+
+      .site-title {
+        margin: 0;
+
+        a {
+          display: block;
+          background-image: url(//agrilife.org/wp-content/themes/AgriLife-Beta/images/logo-ext.png)!important;
+          background-repeat: no-repeat;
+          background-color: $primary-color;
+          background-position: 43px 10px;
+          width: 250px;
+          height: 85px;
+          border-bottom: 10px solid $white;
+          border-right: 13px solid $white;
+          border-left: 13px solid $white;
+
+          span {
+            display: none;
+          }
+        }
+      }
+
+      .social-icons {
+        float: right;
+      }
+    }
+    */
+
+    .widget-area {
+      float: right;
+      text-align: right;
+    }
+
+    .site-description,
+    .title-area,
+    .search-form,
+    .site-title {
+      text-align: left;
+    }
+
+  }
+
+  .header-image .site-header .widget-area {
+    padding: 40px 0;
+  }
+
+
+
+  .agency-bar {
+    background-color: $gray-medium;
+    max-width: 100%;
+    height: 42px;
+
+    $nav-item-width: 167;
+    $nav-item-height: 42;
+    $nav-first-item-width: 164;
+    $nav-first-item-offest: 97;
+
+    .columns {
+      width: $row-width;
+    }
+
+    ul {
+      position: absolute;
+      left: -5px;
+      margin: 0;
+
+      li {
+        position: absolute;
+
+        a {
+          height: 42px;
+          background: url('../img/agency-nav.png');
+          text-indent: -9999em;
+          display: block;
+          position: absolute;
+          @include single-transition(none);
+        }
+
+        &.tfs-item a {
+          width: #{$nav-first-item-width}px;
+          z-index: 5;
+          &:hover {
+            background-position: -1px * $nav-item-width 0;
+          }
+        }
+
+        &.tvmdl-item {
+          left: 125px;
+          z-index: 4;
+          a {
+            width: 167px;
+            background-position: 0 $nav-item-height * -1px;
+            &:hover {
+              background-position: -1px * $nav-item-width $nav-item-height * -1px;
+            }
+          ;
+          }
+        }
+
+        &.ext-item {
+          left: 256px;
+          z-index: 3;
+          a {
+            width: 167px;
+            background-position: 0 $nav-item-height * -2px;
+            &:hover {
+              background-position: -1px * $nav-item-width $nav-item-height * -2px;
+            }
+          ;
+          }
+        }
+
+        &.res-item {
+          left: 385px;
+          z-index: 2;
+          a {
+            width: 167px;
+            background-position: 0 $nav-item-height * -3px;
+            &:hover {
+              background-position: -1px * $nav-item-width $nav-item-height * -3px;
+            }
+          ;
+          }
+        }
+
+        &.college-item {
+          left: 513px;
+          z-index: 1;
+          a {
+            width: 167px;
+            background-position: 0 $nav-item-height * -4px;
+            &:hover {
+              background-position: -1px * $nav-item-width $nav-item-height * -4px;
+            }
+          ;
+          }
+        }
+
+      }
+    }
+  }
+
+  .search-form {
+    float: right;
+    max-height: none;
+    margin: 0.1em 0 0 0;
+    .is-vishidden {
+      @include visuallyhidden;
+    }
+
+    input[type="search"]{
+      width: 100%;
+      border: 1px solid gray;
+      padding: 0.1em .3em;
+    }
+    fieldset {
+      position: relative;
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .search-submit {
+      background: none;
+      padding: 0.78em 1em;
+      border: 0;
+      border-left: 1px solid gray;
+      color: gray;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: auto;
+      .icon-search:before {
+        content: "\73";
+      }
+    }
+  }
+
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up}{
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
+}

@@ -5,7 +5,7 @@
 .entry-comments,
 .entry-pings {
 	background-color: $white;
-	margin-bottom: 40px;
+	@include margin-trailer()
 }
 
 .entry-comments,
@@ -39,10 +39,12 @@
 	}
 }
 
+.comment-list,
+.ping-list {
 
-.comment-list li,
-.ping-list li {
-	list-style-type: none;
+	li {
+		list-style-type: none;
+	}
 }
 
 .comment-list li {
@@ -73,11 +75,15 @@ li.comment {
 	padding: 24px;
 }
 
-@media only screen and (min-width: $break-large) {
+@media #{$small-up} {
 
 }
 
-@media only screen and (min-width: $break-medium) {
+@media #{$small-only} {
+
+}
+
+@media #{$medium-up} {
 
 	.entry-comments {
 		padding: 40px;
@@ -89,7 +95,30 @@ li.comment {
 
 }
 
-@media only screen and (min-width: $break-small) {
+@media #{$medium-only} {
 
+}
+
+@media #{$large-up}{
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
 
 }

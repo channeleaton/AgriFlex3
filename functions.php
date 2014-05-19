@@ -44,6 +44,12 @@ class AgriFlex {
 		// Enqueue our assets
 		$af_assets = new AgriFlex_Assets;
 
+		// Fix the navigation
+		$af_navigation = new AgriFlex_Navigation;
+
+        // Add AgriLife Required DOM Elements
+        $af_required = new AgriFlex_RequiredDOM;
+
 	}
 
 	/**
