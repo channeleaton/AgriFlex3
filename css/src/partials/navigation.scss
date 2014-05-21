@@ -6,9 +6,24 @@
   .top-bar-section ul li > a {
     text-transform: uppercase;
   }
+
+	ul.right {
+
+		.search li {
+			@include grid-row($behavior: collapse);
+
+			input[type="search"] {
+				@include grid-column(8);
+			}
+
+			input[type="submit"] {
+				@include grid-column(4);
+			}
+		}
+	}
 	.wrap {
 	}
-	
+
 }
 
 /* Secondary Navigation
