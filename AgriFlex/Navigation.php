@@ -13,6 +13,9 @@ class AgriFlex_Navigation {
 		// Add custom 'active' class when needed
 		add_filter( 'nav_menu_css_class', array( $this, 'custom_active_class' ), 10, 2 );
 
+		// Add search to the nav bar
+		add_filter( 'agriflex_nav_elements', array( $this, 'display_search' ) );
+
 	}
 
 	public function custom_nav_walker( $nav_output, $nav, $args ) {
@@ -22,7 +25,11 @@ class AgriFlex_Navigation {
 
 		$title = '<ul class="title-area"><li class="name"></li><li class="toggle-topbar menu-icon"><a><span></span></a></ul>';
 
-		$nav = $title . '<section class="top-bar-section">' . wp_nav_menu( $args ) . '</section>';
+		$nav = sprintf( '%s<section class="top-bar-section">%s %s</section>',
+			$title,
+			wp_nav_menu( $args ),
+			apply_filters( 'agriflex_nav_elements', '' )
+		);
 
 		$nav_markup_open = genesis_markup( array(
 				'html5' => '<div class="top-bar-wrapper contain-to-grid"><nav class="nav-primary top-bar" data-topbar data-options="is_hover: false">',
@@ -73,6 +80,15 @@ class AgriFlex_Navigation {
      }
 
      return $classes;
+
+	}
+
+	public function display_search() {
+
+		$output = sprintf( '<ul class="right"><div class="search"><li>%s</li></div></ul>',
+			get_search_form( false )
+		);
+		return $output;
 
 	}
 
