@@ -19,6 +19,14 @@
       }
     }
 
+  .footer-container {
+    @include grid-column( $columns: 10, $float: left );
+  }
+
+  .footer-container-tamus {
+    @include grid-column( $columns: 2, $float: right );
+  }
+
     .footer-tamus {
       border: 2px solid $white;
     }

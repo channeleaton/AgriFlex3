@@ -176,7 +176,7 @@ class AgriFlex_RequiredDOM
     {
 
         $output = '
-            <div class="column medium-10 ">
+            <div class="footer-container">
                 <ul class="req-links">
 			        <li><a href="http://agrilife.org/required-links/compact/">Compact with Texans</a></li>
 			        <li><a href="http://agrilife.org/required-links/privacy/">Privacy and Security</a></li>
@@ -192,7 +192,7 @@ class AgriFlex_RequiredDOM
 			        <li class="last"><a href="http://agrilife.org/required-links/orpi/">Open Records/Public Information</a></li>
 		        </ul>
             </div>
-            <div class="column medium-2">
+            <div class="footer-container-tamus">
                 <a href="http://tamus.edu/" title="Texas A&M University System"><img class="footer-tamus" src="'.AF_THEME_DIRURL.'/img/footer-tamus-maroon.png" title="Texas A&M University System Member" alt="Texas A&M University System Member" /><noscript><img src="//agrilifecdn.tamu.edu/wp-content/themes/AgriLife-Beta/images/footer-tamus.png" title="Texas A&M University System Member" alt="Texas A&M University System Member" /></noscript></a>
             </div>';
 
