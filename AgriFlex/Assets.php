@@ -148,11 +148,13 @@ class AgriFlex_Assets {
      */
     public function add_typekit() {
 
-        // For Extension
-        $key = 'xox0blb';
-
-        // For Default Ariflex3
-        $key = 'mtx5vmp';
+        if('agrilife-extension' == AG_EXT_DIRNAME ) {
+            // For Extension
+            $key = 'xox0blb';
+        } else {
+            // For Default Ariflex3
+            $key = 'mtx5vmp';
+        }
 
         if( !is_admin() ) :
             ?>
