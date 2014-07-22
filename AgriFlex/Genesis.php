@@ -201,8 +201,10 @@ class AgriFlex_Genesis {
 	 */
 	private function remove_genesis_sidebars() {
 
-		unregister_sidebar( 'sidebar-alt' );
-		unregister_sidebar( 'header-right' );
+		if('agrilife-extension' !== AG_EXT_DIRNAME ) {
+			unregister_sidebar( 'sidebar-alt' );
+			unregister_sidebar( 'header-right' );
+		}
 
 	}
 
