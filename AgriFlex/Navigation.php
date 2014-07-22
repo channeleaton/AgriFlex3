@@ -23,7 +23,7 @@ class AgriFlex_Navigation {
 		$args['menu_class'] = $args['menu_class'] . ' left';
 		$args['walker'] = new AgriFlex_CustomNavigationWalker;
 
-		$title = '<ul class="title-area"><li class="name"></li><li class="toggle-topbar menu-icon"><a><span></span></a></ul>';
+		$title = '<ul class="title-area"><li class="name"></li><li class="toggle-topbar menu-icon"><a><span>Menu</span></a></ul>';
 
 		$nav = sprintf( '%s<section class="top-bar-section">%s %s</section>',
 			$title,
