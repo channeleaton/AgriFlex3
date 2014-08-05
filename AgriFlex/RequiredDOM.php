@@ -18,7 +18,9 @@ class AgriFlex_RequiredDOM
         $this->remove_genesis_footer();
 
         // Add required links to footer
-        $this->add_required_links();
+        //$this->build_footer_content();
+
+        add_action('genesis_before', array($this, 'build_footer_content'));
 
         // Alter header title
         //$this->alter_header_title();
@@ -87,10 +89,11 @@ class AgriFlex_RequiredDOM
      * @since 1.0
      * @return void
      */
-    private function add_required_links()
+    public function build_footer_content()
     {
 
-        add_action('genesis_footer', array($this, 'render_footer_content'));
+        add_action('genesis_footer', array($this, 'render_required_links'));
+        add_action('genesis_footer', array($this, 'render_tamus_logo'));
 
     }
 
@@ -114,8 +117,10 @@ class AgriFlex_RequiredDOM
     private function move_genesis_breadcrumbs()
     {
 
-        remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
-        add_action( 'genesis_before_content', 'genesis_do_breadcrumbs' );
+        if('agrilife-extension' != AG_EXT_DIRNAME ) {
+            remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+            add_action( 'genesis_before_content', 'genesis_do_breadcrumbs' );
+        }
 
         add_filter( 'genesis_breadcrumb_args', 'sp_breadcrumb_args' );
         function sp_breadcrumb_args( $args ) {
@@ -150,8 +155,8 @@ class AgriFlex_RequiredDOM
     {
 
         $output = '
-          <div class="agency-bar row show-for-medium-up">
-            <div class="large-centered columns">
+          <div class="agency-bar">
+            <div class="agency-wrap">
                 <ul>
 		            <li class="tfs-item"><a href="http://texasforestservice.tamu.edu/"><span>Texas A&amp;M Forest Service</span></a></li>
 		            <li class="tvmdl-item"><a href="http://tvmdl.tamu.edu/"><span>Texas A&amp;M Veterinary Medical Diagnostics Laboratory</span></a></li>
@@ -172,7 +177,7 @@ class AgriFlex_RequiredDOM
      * @since 1.0
      * @return string
      */
-    public function render_footer_content()
+    public static function render_required_links()
     {
 
         $output = '
@@ -191,7 +196,21 @@ class AgriFlex_RequiredDOM
 			        <li><a href="http://aghr.tamu.edu/education-civil-rights.htm" target="_blank">Equal Opportunity for Educational Programs Statement</a></li>
 			        <li class="last"><a href="http://agrilife.org/required-links/orpi/">Open Records/Public Information</a></li>
 		        </ul>
-            </div>
+            </div>';
+
+        echo $output;
+
+    }
+
+    /**
+     * Render TAMUS logo
+     * @since 1.0
+     * @return string
+     */
+    public static function render_tamus_logo()
+    {
+
+        $output = '
             <div class="footer-container-tamus">
                 <a href="http://tamus.edu/" title="Texas A&M University System"><img class="footer-tamus" src="'.AF_THEME_DIRURL.'/img/footer-tamus-maroon.png" title="Texas A&M University System Member" alt="Texas A&M University System Member" /><noscript><img src="//agrilifecdn.tamu.edu/wp-content/themes/AgriLife-Beta/images/footer-tamus.png" title="Texas A&M University System Member" alt="Texas A&M University System Member" /></noscript></a>
             </div>';
@@ -206,7 +225,7 @@ class AgriFlex_RequiredDOM
      * @todo Replace with async js and deal with FOUC
      * @return string
      */
-    public function add_typekit($key) {
+    public static function add_typekit($key) {
 
         if( !is_admin() ) :
             ?>

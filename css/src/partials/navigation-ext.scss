@@ -1,0 +1,152 @@
+/* Primary Navigation
+--------------------------------------------- */
+
+.nav-primary {
+
+  .top-bar-section {
+
+    .menu-primary {
+      @include grid-column();
+    }
+
+    ul {
+      width: 100%;
+      display: block;
+
+      li > a {
+        text-transform: uppercase;
+        font-size: rem-calc(14);
+      }
+    }
+  }
+
+	ul.menu-search-container {
+
+		.search li {
+			@include grid-row($behavior: collapse);
+
+			input[type="search"] {
+				@include grid-column(8);
+			}
+
+			input[type="submit"] {
+				@include grid-column(4);
+			}
+		}
+	}
+	.wrap {
+	}
+
+}
+
+/* Secondary Navigation
+--------------------------------------------- */
+
+.nav-secondary {
+
+	.wrap {
+	}
+}
+
+@media #{$small-up} {
+
+}
+
+@media #{$small-only} {
+
+}
+
+@media #{$medium-up} {
+  .nav-primary {
+    .top-bar-section{
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+
+      ul {
+
+        &.menu-search-container {
+          display: none;
+        }
+        li {
+          & > a {
+            font-size: rem-calc(18);
+          }
+          &.current-menu-item:after {
+            content: " ";
+            height: 0;
+            width: 0;
+            pointer-events: none;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #5c0025;
+
+            position: absolute;
+            top: 37px;
+            margin-left: -9px;
+          }
+        }
+      }
+
+      .menu-primary {
+
+        .menu-item {
+          position: relative;
+          padding-left: 0;
+          padding-right: 0;
+          width: 20%;
+          float: left;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up}{
+  .nav-primary {
+    .top-bar-section{
+      background-color: #fff;
+      ul {
+        @include grid-column($columns: 7, $center:true);
+
+        li {
+          & > a {
+            font-size: rem-calc(19);
+          }
+          a:not(.button) {
+            line-height: 78px;
+          }
+          &.current-menu-item:after {
+            top: 68px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
+}

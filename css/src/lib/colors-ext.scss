@@ -2,15 +2,16 @@
 	 Often used to set a color scheme. Change
 	 how you please.
 --------------------------------------------- */
-$gray-dark: #333;
-$gray-medium: #5E564E;
-$gray-light: #999;
-$gray-lighter: #d6d6d6;
-$gray-lightest: #f7f7f9;
-$white: #f8f8f8; // Because sometimes white isn't always white
+$gray-dark: #303031;
+$gray-medium: #3f4041;
+$gray-light: #5E564E;
+$gray-lighter: #707274;
+$gray-lightest: #e7e7e7;
+$grey-even-lighter-than-lightest: #f6f6f6;
+$white: #fff; // Because sometimes white isn't always white
 
 $primary-color: #1b607b;
-$secondary-color: #e7e7e7;
+$secondary-color: #5c0025;
 $alert-color: #f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
@@ -23,18 +24,44 @@ $body-font-color: $gray-medium;
 $code-color: $gray-dark;
 $code-border: $gray-lighter;
 $code-background: $gray-lightest;
+$content-bg-color: $white;
+
+
+/* Agency Bar
+--------------------------------------------- */
+$gray-agency-bar: #5E564E;
 
 /* Header
 --------------------------------------------- */
-$header-background: $white;
+$header-background: $gray-lightest;
 $site-title: $gray-light;
-$site-description: $gray-dark;
+$site-description: $white;
 
 /* Navigation
 --------------------------------------------- */
-$nav-text: $gray-dark;
-$nav-link: $gray-dark;
+$nav-text: $secondary-color;
+$nav-link: $secondary-color;
 $nav-sub-border: #eee;
+
+
+$topbar-bg: $white;
+$topbar-menu-link-color: $secondary-color;
+$topbar-menu-icon-color: $secondary-color;
+$topbar-dropdown-bg: $white;
+$topbar-dropdown-toggle-color: $secondary-color;
+$topbar-dropdown-toggle-alpha: 1.0;
+$topbar-link-bg-hover: $gray-lightest;
+$topbar-link-color-hover: $gray-dark;
+
+$topbar-link-color: $secondary-color;
+$topbar-link-color-active: $secondary-color;
+$topbar-link-bg-active: $white;
+$topbar-link-bg-active-hover: $white;
+
+/* Sidebars
+--------------------------------------------- */
+$sidebar-primary-background: #f6f6f6;
+$sidebar-secondary-background: $white;
 
 /* Pagination
 --------------------------------------------- */
@@ -56,5 +83,5 @@ $widget-footer-form-border: #ddd;
 
 /* Footer
 --------------------------------------------- */
-$footer-text: $white;
-$footer-background: $primary-color;
+$footer-text: #8d9092;
+$footer-background: $gray-medium;

@@ -1,0 +1,174 @@
+/* Content Area
+---------------------------------------------------------------------------------------------------- */
+
+/* Entries
+--------------------------------------------- */
+
+.entry {
+	@include margin-trailer();
+}
+
+.entry-content {
+
+	.attachment a,
+	.gallery a {
+		border: none;
+	}
+
+	ol,
+	p,
+	ul {
+		margin-bottom: 26px;
+	}
+
+	ol,
+	ul {
+		margin-left: 40px;
+
+		&.list-unstyled {
+			margin-left: 20px;
+
+			> li {
+				list-style: none;
+			}
+		}
+	}
+
+	ol li {
+		list-style-type: decimal;
+	}
+
+	ul li {
+		list-style-type: disc;
+	}
+
+	ol ol,
+	ul ul {
+		margin-bottom: 0;
+	}
+
+	.search-form {
+		width: 50%;
+	}
+}
+
+.archive-description,
+.author-box,
+.entry,
+.entry-footer .entry-meta {
+	padding: 0;
+}
+
+.quote-caption {
+	margin-bottom: 26px;
+}
+
+.entry-meta {
+	clear: both;
+	color: $gray-dark;
+	@include adjust-font-size-to(14px);
+}
+
+.entry-header .entry-meta {
+	margin-bottom: 24px;
+}
+
+.entry-title {
+	@include break-text();
+}
+
+
+/* Entry Navigation
+--------------------------------------------- */
+
+.pagination {
+	clear: both;
+	@include adjust-font-size-to(14px);
+	margin: 40px 0;
+
+	li {
+		display: inline;
+		a {
+			cursor: pointer;
+			display: inline-block;
+			padding: 8px 12px;
+
+			&:hover {
+			}
+		}
+
+		&.active a {
+		}
+	}
+}
+
+/* Custom Post Types
+--------------------------------------------- */
+
+.single-extension-solutions {
+  .solution-featured-image {
+    margin: .5rem 0 1.5rem 0;
+  }
+
+  .solution-links {
+    ul {
+      @include grid-row();
+      list-style-type: none;
+
+      li {
+        @include grid-column($columns: 6, $collapse: true, $float: left);
+        line-height: 2;
+        list-style-type: none;
+
+        a {
+          text-decoration: underline;
+
+          &:hover {
+            background-color: $gray-lightest;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media #{$small-up} {
+
+}
+
+@media #{$small-only} {
+
+}
+
+@media #{$medium-up} {
+
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up}{
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
+}

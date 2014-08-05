@@ -7,7 +7,7 @@
     text-transform: uppercase;
   }
 
-	ul.right {
+	ul.menu-search-container {
 
 		.search li {
 			@include grid-row($behavior: collapse);

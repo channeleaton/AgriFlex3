@@ -10,23 +10,23 @@ $agency-type: "extension";
 @import "lib/variables";
 @import "lib/mixins";
 @import "lib/functions";
-@import "lib/settings";
+@import "lib/settings-ext";
 
 // Import Zurb Foundation
 @import "foundation";
 
 // Site-wide CSS
-@import "partials/typography";
+@import "partials/typography-ext";
 @import "partials/objects";
 @import "partials/forms";
-@import "partials/layout";
+@import "partials/layout-ext";
 @import "partials/wordpress";
 
 // Section/page-specific CSS
-//@import "partials/header-ext";  // ext
-@import "partials/navigation";
-@import "partials/content";
+@import "partials/header-ext";
+@import "partials/navigation-ext";
+@import "partials/content-ext";
 @import "partials/comments";
-@import "partials/sidebars";
+@import "partials/sidebars-ext";
 @import "partials/widgets";
-@import "partials/footer";
+@import "partials/footer-ext";

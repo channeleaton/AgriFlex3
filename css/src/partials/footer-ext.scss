@@ -1,0 +1,139 @@
+/* Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+.site-footer {
+  background-color: $footer-background;
+  color: $footer-text;
+  @include adjust-font-size-to(10px);
+  text-align: center;
+  font: {
+    family: $footer-font-family;
+    weight: $footer-font-weight;
+  }
+
+  .wrap {
+    padding-top: 3em;
+    @include grid-row();
+  }
+
+  ul {
+    text-align: center;
+    font: {
+      family: $footer-font-family;
+      weight: $footer-font-weight;
+    }
+    li {
+      display: inline-block;
+      margin-right: .5em;
+    }
+  }
+
+  .footer-container-ext {
+    @include grid-column($columns: 6, $float: left, $collapse:true);
+  }
+
+  .footer-ext-logo {
+    width: 214px;
+    height: 107px;
+    padding: 26px 32px;
+    float: right;
+    border-bottom: 1px solid $gray-lighter;
+    border-right: 1px solid $gray-lighter;
+  }
+
+  .footer-container-tamus {
+    @include grid-column($columns: 6, $float: right, $collapse:true);
+  }
+
+  .footer-tamus {
+    height: 107px;
+    width: 214px;
+    padding: 15px 57px;
+    float: left;
+    border-bottom: 1px solid $gray-lighter;
+  }
+
+  .footer-center {
+    //@include grid-column($columns: 12, $center: true);
+    @include grid-row();
+
+    .widget {
+      .alignleft {
+        float: none;
+      }
+    }
+
+    .simple-social-icons {
+      margin-top: 1em;
+      ul li {
+        float: none;
+        a {
+          background-color: #707274 !important;
+          border-radius: 15px;
+          color: #3f4041 !important;
+          font-size: 15px;
+          padding: 8px;
+        }
+      }
+    }
+  }
+
+  .footer-container-required {
+    padding-top: 2em;
+    //@include grid-column($columns: 12);
+    border-top: 1px solid $gray-lighter;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $footer-text;
+    font-size: .9rem;
+  }
+
+  .footer-widgets .widget-area {
+  }
+
+}
+
+@media #{$small-up} {
+
+}
+
+@media #{$small-only} {
+
+}
+
+@media #{$medium-up} {
+
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up}{
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
+}

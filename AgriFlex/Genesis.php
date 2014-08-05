@@ -190,7 +190,15 @@ class AgriFlex_Genesis {
 
 		genesis_unregister_layout( 'content-sidebar-sidebar' );
 		genesis_unregister_layout( 'sidebar-sidebar-content' );
-		genesis_unregister_layout( 'sidebar-content-sidebar' );
+        if('agrilife-extension' !== AG_EXT_DIRNAME ) {
+          // Extension uses three column
+		  genesis_unregister_layout( 'sidebar-content-sidebar' );
+        }
+        if('agrilife-extension' == AG_EXT_DIRNAME ) {
+          // Extension does not use side-content or content-sidebar
+          //genesis_unregister_layout( 'content-sidebar' );
+          //genesis_unregister_layout( 'sidebar-content' );
+        }
 
 	}
 
