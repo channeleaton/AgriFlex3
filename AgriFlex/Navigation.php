@@ -32,7 +32,7 @@ class AgriFlex_Navigation {
 		);
 
 		$nav_markup_open = genesis_markup( array(
-				'html5' => '<div class="top-bar-wrapper contain-to-grid"><nav class="nav-primary top-bar" data-topbar data-options="is_hover: false">',
+				'html5' => '<div class="top-bar-wrapper"><nav class="nav-primary top-bar" data-topbar data-options="is_hover: false">',
 				'xhtml' => '<div id="nav">',
 				'context' => 'nav-primary',
 				'echo' => false,
@@ -85,7 +85,7 @@ class AgriFlex_Navigation {
 
 	public function display_search() {
 
-		$output = sprintf( '<ul class="right"><div class="search"><li>%s</li></div></ul>',
+		$output = sprintf( '<ul class="menu-search-container"><div class="search"><li>%s</li></div></ul>',
 			get_search_form( false )
 		);
 		return $output;
