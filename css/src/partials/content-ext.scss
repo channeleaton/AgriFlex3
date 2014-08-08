@@ -105,12 +105,14 @@
 /* Custom Post Types
 --------------------------------------------- */
 
-.single-extension-solutions {
-  .solution-featured-image {
+
+  .solution-featured-image,
+  .program-featured-image {
     margin: .5rem auto 1.5rem auto;
   }
 
-  .solution-links {
+  .solution-links,
+  .program-links {
     ul {
       @include grid-row();
       list-style-type: none;
@@ -130,7 +132,7 @@
       }
     }
   }
-}
+
 
 
 @media #{$small-up} {
@@ -142,11 +144,11 @@
 }
 
 @media #{$medium-up} {
-  .single-extension-solutions {
-    .solution-featured-image {
+
+  .solution-featured-image,
+    .program-featured-image {
       display: block;
     }
-  }
 
 }
 
