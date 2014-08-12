@@ -240,6 +240,9 @@ footer .wrap {
             width: 316px;
             float: left;
             margin-top: 104px;
+            // Extend background to bottom
+            margin-bottom: -99999px;
+            padding-bottom: 99999px;
           }
 
         }

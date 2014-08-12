@@ -91,6 +91,9 @@
   a {
     color: $footer-text;
     font-size: .9rem;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .footer-widgets .widget-area {
@@ -107,6 +110,10 @@
 }
 
 @media #{$medium-up} {
+  .site-footer {
+    border-top: 32px solid $gray-dark;
+    padding: 0 20%;
+  }
 
 }
 

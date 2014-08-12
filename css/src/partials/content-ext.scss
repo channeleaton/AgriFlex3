@@ -10,6 +10,14 @@
 
 .entry-content {
 
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
 	.attachment a,
 	.gallery a {
 		border: none;
@@ -121,14 +129,6 @@
         @include grid-column($columns: 6, $collapse: true, $float: left);
         line-height: 2;
         list-style-type: none;
-
-        a {
-          text-decoration: underline;
-
-          &:hover {
-            background-color: $gray-lightest;
-          }
-        }
       }
     }
   }
