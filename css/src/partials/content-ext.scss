@@ -203,7 +203,15 @@
     }
   }
 }
-
+.home-sidebar {
+  li {
+    width: 50%;
+    float: left;
+    a {
+      line-height: 2rem;
+    }
+  }
+}
 
 .home {
   &.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .content {
@@ -258,6 +266,7 @@
   .request {
     margin: 0 auto;
     width: 200px;
+    clear: both;
     .what {
       text-align: center;
       line-height: 4rem;
@@ -278,7 +287,7 @@
   }
 }
 
-.home .programs {
+.programs {
   background-color: $gray-lightest;
   padding: 1rem;
 
@@ -293,14 +302,6 @@
       @include grid-column(12);
       &:hover {
         text-decoration: underline;
-      }
-    }
-    @media #{$medium-up} {
-      .single-program {
-        @include grid-column(6, $collapse: true);
-        margin-left: 1rem;
-        margin-right: 0;
-        width: 350px;
       }
     }
 
@@ -332,6 +333,18 @@
     .program-featured-image {
       display: block;
     }
+
+  .programs {
+    .program-list {
+      .single-program {
+        @include grid-column(6, $collapse: true);
+        margin-left: 1rem;
+        margin-right: 0;
+        width: 350px;
+
+      }
+    }
+  }
 
 }
 
