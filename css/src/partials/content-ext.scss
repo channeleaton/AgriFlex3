@@ -85,6 +85,17 @@
 	@include break-text();
 }
 
+.button {
+  @include button($padding: rem-calc(12),$radius: 1.5rem);
+  border: 4px solid #dee2e4;
+  box-shadow: 0 1px 0 inset #8fd0e9;
+  @include background-image(linear-gradient(#31809f, #1b607b));
+  &:hover {
+    background-color: #1b607b;
+    @include background-image(linear-gradient(#1b607b, #1b607b));
+  }
+
+}
 
 /* Entry Navigation
 --------------------------------------------- */
@@ -134,6 +145,178 @@
   }
 
 
+/* Home
+--------------------------------------------- */
+.home {
+  .site-description {
+    margin: 33px auto 0px auto;
+  }
+}
+.home-feature-container {
+  @include grid-row();
+  background-color: #fff;
+
+  .home-featured-image-container {
+    @include grid-column(12);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .home-featured-image {
+      display: block;
+      margin: 0 auto;
+    }
+
+  }
+  .home-featured-content {
+    @include grid-column(12);
+    .featured-title-name {
+      color: $gray-light;
+      text-transform: uppercase;
+      font-size: .8rem;
+      padding: 1rem 0 .5rem 0;
+    }
+    .featured-title {
+      color: #000000;
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      padding: 0 0 1rem 0;
+    }
+    .feat-solution-2 {
+      line-height: 3rem;
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+
+  @media #{$medium-up} {
+    .feat-solution-1,
+    .feat-solution-2 {
+      @include grid-column(6,$collapse:true);
+    }
+    .single-program {
+      @include grid-column(6);
+    }
+  }
+}
+
+
+.home {
+  &.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .content {
+    padding: 0;
+  }
+  & .entry {
+    margin-bottom: 0;
+  }
+}
+.home-featured-solutions {
+  border: 1px solid $gray-lightest;
+  margin-bottom: 3rem;
+  h4 {
+    padding: .7rem 0 0 1.8rem;
+    font-size: 1.4rem;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+  li {
+    list-style-type: none;
+    word-wrap: break-word;
+    padding: 0 1rem;
+    a {
+      display: block;
+      line-height: 1.1rem;
+      //background-color: $grey-even-lighter-than-lightest;
+      padding: .7rem .4rem .7rem .8rem;
+      border-left: 3px solid white;
+      border-bottom: 1px dashed $gray-lightest;
+      text-decoration: underline;
+
+      &:hover {
+        border-left: 3px solid $primary-color;
+        background-color: $gray-lightest;
+      }
+    }
+    &.current-menu-item a {
+      border-left: 3px solid $primary-color;
+      background-color: $gray-lightest;
+    }
+    .sub-menu a {
+      padding-left: 1.6rem;
+    }
+    @media #{$medium-up} {
+      width: 50%;
+      float: left;
+    }
+  }
+
+  .request {
+    margin: 0 auto;
+    width: 200px;
+    .what {
+      text-align: center;
+      line-height: 4rem;
+      font-size: .9rem;
+      color: $gray-lighter;
+    }
+    .home-request {
+      position: absolute;
+      margin-top: -1.5rem;
+      margin-left: .5rem;
+      color: $primary-color;
+      @include background-image(linear-gradient(#fefefe, #f5f5f5));
+      &:hover {
+        @include background-image(linear-gradient(#f5f5f5, #f5f5f5));
+      }
+    }
+
+  }
+}
+
+.home .programs {
+  background-color: $gray-lightest;
+  padding: 1rem;
+
+  .program-header {
+    font-size: 1.4rem;
+    padding-left: 1rem;
+  }
+
+  .program-list {
+    @include grid-row();
+    .single-program {
+      @include grid-column(12);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @media #{$medium-up} {
+      .single-program {
+        @include grid-column(6, $collapse: true);
+        margin-left: 1rem;
+        margin-right: 0;
+        width: 350px;
+      }
+    }
+
+    h3 {
+      font-size: 1rem;
+      color: $primary-color;
+      padding: .5rem 1rem;
+      border-bottom: 3px solid #bcbec1;
+      background: white;
+      margin: 0;
+    }
+
+  }
+}
+
+
 
 @media #{$small-up} {
 
@@ -157,6 +340,40 @@
 }
 
 @media #{$large-up}{
+  .home {
+    .site-inner .wrap .content-sidebar-wrap {
+      width: 1140px;
+      .sidebar-primary {
+        width: 370px;
+      }
+      .content {
+        width: 770px;
+      }
+    }
+  }
+
+  .home-feature-container {
+    margin-bottom: 38px;
+    .home-featured-image-container {
+      @include grid-column(9, $collapse:true);
+      padding-left: 1rem;
+      width: 824px;
+      .home-featured-image {
+        margin: 0;
+      }
+    }
+    .home-featured-content {
+      @include grid-column(3, $collapse:true);
+      width: 316px;
+      padding-right: 1rem;
+      margin-top: 2rem;
+    }
+    .feat-solution-1,
+    .feat-solution-2 {
+      @include grid-column(12,$collapse:true);
+      margin-bottom: 0;
+    }
+  }
 
 }
 
