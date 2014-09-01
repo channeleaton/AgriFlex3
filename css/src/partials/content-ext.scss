@@ -225,8 +225,8 @@
   border: 1px solid $gray-lightest;
   margin-bottom: 3rem;
   h4 {
-    padding: .7rem 0 0 1.8rem;
-    font-size: 1.4rem;
+    padding: 1.4rem 0 0 1.8rem;
+    font-size: 1.6rem;
   }
 
   ul {
@@ -358,6 +358,7 @@
       width: 1140px;
       .sidebar-primary {
         width: 370px;
+        margin-top: 58px;
       }
       .content {
         width: 770px;

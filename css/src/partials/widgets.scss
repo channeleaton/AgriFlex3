@@ -31,6 +31,36 @@ h4.widget-title {
 
 }
 
+/* Genesis - Featured Posts Widget
+--------------------------------------------- */
+.widget.featuredpost {
+  &.featured-content .entry {
+    @include grid-row($behavior: nest);
+    border-bottom: none;
+  }
+  .entry-image {
+    @include grid-column($columns:4, $center:true);
+  }
+  .entry-header {
+    float: right;
+    @include grid-column($columns:8, $float:right, $last-column:true, $collapse:true);
+    .entry-title {
+      font-size: 1rem;
+      line-height: 1rem;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .entry-time {
+      text-transform: uppercase;
+    }
+
+  }
+}
+
 /* Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
