@@ -42,7 +42,6 @@ h4.widget-title {
     @include grid-column($columns:4, $center:true);
   }
   .entry-header {
-    float: right;
     @include grid-column($columns:8, $float:right, $last-column:true, $collapse:true);
     .entry-title {
       font-size: 1rem;
@@ -60,6 +59,48 @@ h4.widget-title {
 
   }
 }
+/* Genesis Sandbox Featured Content Widget (home sidebar only)
+--------------------------------------------- */
+.home-sidebar .widget.featured-content {
+  .widgettitle {
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .entry {
+    @include grid-row($behavior: nest);
+    border-bottom: none;
+  }
+  .entry-image {
+    @include grid-column($columns:4, $center:true);
+    position: absolute;
+  }
+  .byline {
+    font-size: .9rem;
+    text-transform: uppercase;
+    @include grid-column($columns:8, $float:right, $last-column:true, $collapse:true);
+  }
+  .entry-title {
+    float: right;
+    @include grid-column($columns:8, $float:right, $last-column:true, $collapse:true);
+    font-size: 1rem;
+    line-height: 1rem;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+
+}
+
 
 /* Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
