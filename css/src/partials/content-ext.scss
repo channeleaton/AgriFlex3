@@ -138,11 +138,17 @@
 
       li {
         @include grid-column($columns: 6, $collapse: true, $float: left);
-        line-height: 2;
-        list-style-type: none;
+        width: 45%;
+        margin-left: 5%;
       }
     }
   }
+
+/* Breadcrumb Styling
+--------------------------------------------- */
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
 
 /* Google Custom Search Results
 --------------------------------------------- */
@@ -154,7 +160,7 @@
 --------------------------------------------- */
 .home {
   .site-description {
-    margin: 33px auto 0px auto;
+    margin: 0px auto;
   }
 }
 .home-feature-container {
@@ -373,6 +379,9 @@
       .content {
         width: 770px;
       }
+    }
+    .site-description {
+      margin: 33px auto 0px auto;
     }
   }
 
