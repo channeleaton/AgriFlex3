@@ -5,7 +5,7 @@
 --------------------------------------------- */
 
 .entry {
-	@include margin-trailer();
+	@include margin-trailer(2);
 }
 
 .entry-content {
@@ -83,6 +83,7 @@
 
 .entry-title {
 	@include break-text();
+    line-height: 2.6rem;
 }
 
 .button {
