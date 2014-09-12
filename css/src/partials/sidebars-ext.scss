@@ -44,6 +44,15 @@
 	}
 
 	&.sidebar-secondary {
+      .current-highlight {
+        border-left: 3px solid $primary-color;
+      }
+      .current-menu-ancestor a {
+        @extend .current-highlight;
+        &:hover {
+          border-left: 3px solid $primary-color;
+        }
+      }
       li {
         list-style-type: none;
         word-wrap: break-word;
@@ -55,17 +64,17 @@
           border-left: 3px solid $grey-even-lighter-than-lightest;
 
           &:hover {
-            border-left: 3px solid $primary-color;
+            border-left: 3px solid $gray-lightest;
             background-color: $gray-lightest;
             text-decoration: none;
           }
         }
         &.current-menu-item a {
-          border-left: 3px solid $primary-color;
-          background-color: $gray-lightest;
+          @extend .current-highlight;
+          font-weight: bold;
         }
         .sub-menu a {
-          padding-left: 1.6rem;
+          padding: .4rem .4rem .4rem 1.6rem;
         }
       }
 
