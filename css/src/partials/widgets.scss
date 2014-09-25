@@ -33,6 +33,7 @@ h4.widget-title {
 
 /* Genesis - Featured Posts Widget
 --------------------------------------------- */
+/*
 .widget.featuredpost {
   &.featured-content .entry {
     @include grid-row($behavior: nest);
@@ -59,6 +60,8 @@ h4.widget-title {
 
   }
 }
+*/
+
 /* Genesis Sandbox Featured Content Widget (home sidebar only)
 --------------------------------------------- */
 .home-sidebar .widget.featured-content {
@@ -71,12 +74,20 @@ h4.widget-title {
     }
   }
   .entry {
-    @include grid-row($behavior: nest);
+    @include grid-row();
     border-bottom: none;
-  }
-  .entry-image {
-    @include grid-column($columns:4, $center:true);
-    position: absolute;
+
+    > .alignleft {
+      @include grid-column($columns:4, $collapse:true);
+      float: none;
+
+      img.alignleft {
+        margin: 0;
+        float: none;
+        width: 33.333333%;
+        padding-right: 1rem;
+      }
+    }
   }
   .byline {
     font-size: .9rem;
