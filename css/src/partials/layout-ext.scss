@@ -190,8 +190,37 @@ footer .wrap {
 
 }
 
-@media #{$medium-only} {
+@media #{$medium-up-common} {
 
+  .sidebar-content-sidebar {
+    .site-inner {
+      .wrap {
+        @include grid-row($behavior: nest-collapse);
+
+        .sidebar-secondary {
+          @include grid-column($columns: 3, $float: left, $collapse: true);
+          background-color: $sidebar-secondary-background;
+          margin-top: 104px;
+        }
+
+        .content-sidebar-wrap {
+          @include grid-column($columns: 9, $float: right, $collapse: true);
+
+          .content {
+            @include grid-column($columns: 8, $float: left);
+            background-color: $content-bg-color;
+          }
+
+          .sidebar-primary {
+            @include grid-column($columns: 4, $float: left, $collapse: true);
+            margin-top: 104px;
+          }
+
+        }
+
+      }
+    }
+  }
 }
 
 @media #{$large-up}{

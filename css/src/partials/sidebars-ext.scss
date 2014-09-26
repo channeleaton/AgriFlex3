@@ -18,7 +18,6 @@
     }
 
 	.widget {
-      padding-top: 3rem;
       &:first-child {
         padding-top: 0;
       }
@@ -47,10 +46,12 @@
       .current-highlight {
         border-left: 3px solid $primary-color;
       }
-      .current-menu-ancestor a {
-        @extend .current-highlight;
-        &:hover {
-          border-left: 3px solid $primary-color;
+      .current-menu-ancestor {
+        a {
+          @extend .current-highlight;
+          &:hover {
+            border-left: 3px solid $primary-color;
+          }
         }
       }
       li {
@@ -69,9 +70,14 @@
             text-decoration: none;
           }
         }
-        &.current-menu-item a {
-          @extend .current-highlight;
-          font-weight: bold;
+        &.current-menu-item {
+          a {
+            @extend .current-highlight;
+            font-weight: bold;
+          }
+          .sub-menu a {
+            font-weight: normal;
+          }
         }
         .sub-menu a {
           padding: .4rem .4rem .4rem 1.6rem;
@@ -104,26 +110,23 @@
   .sidebar {
     &.sidebar-primary .widget,
     &.sidebar-secondary .widget{
-      width: 50%;
-      padding-bottom: 1rem;
+      width: 100%;
+      margin-bottom: 1rem;
     }
   }
 
 }
 
-@media #{$medium-only} {
-
+@media #{$medium-up-common} {
+  .sidebar {
+    margin-top: 3rem;
+    .widget {
+      padding-top: 3rem;
+    }
+  }
 }
 
 @media #{$large-up}{
-  .sidebar {
-    &.sidebar-primary .widget,
-    &.sidebar-secondary .widget{
-      width: 100%;
-
-    }
-  }
-
 
 }
 
