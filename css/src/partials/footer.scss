@@ -13,6 +13,7 @@
   }
 
     ul {
+      margin-left: 0;
       font: {
         family: $footer-font-family;
         weight: $footer-font-weight;
@@ -20,11 +21,11 @@
     }
 
   .footer-container {
-    @include grid-column( $columns: 10, $float: left );
+    @include grid-column(12);
   }
 
   .footer-container-tamus {
-    @include grid-column( $columns: 2, $float: right );
+    @include grid-column(12);
   }
 
     .footer-tamus {
@@ -44,19 +45,23 @@
 
 }
 
-@media #{$small-up} {
-
-}
-
-@media #{$small-only} {
-
-}
-
 @media #{$medium-up} {
 
   .site-footer {
     max-width: $row-width;
     margin: 0 auto;
+
+    .footer-container {
+      @include grid-column( $columns: 10, $float: left );
+    }
+
+    .footer-container-tamus {
+      @include grid-column( $columns: 2, $float: right );
+      a {
+        float: right;
+      }
+    }
+
   }
 
   .req-links li {
@@ -64,33 +69,5 @@
     font-size: 0.8em;
     margin: .2em 1em .2em 0;
   }
-
-}
-
-@media #{$medium-only} {
-
-}
-
-@media #{$large-up}{
-
-}
-
-@media #{$large-only}{
-
-}
-
-@media #{$xlarge-up}{
-
-}
-
-@media #{$xlarge-only}{
-
-}
-
-@media #{$xxlarge-up}{
-
-}
-
-@media #{$xxlarge-only}{
 
 }

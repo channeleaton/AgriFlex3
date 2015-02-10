@@ -18,12 +18,15 @@
 @import "partials/forms";
 @import "partials/layout";
 @import "partials/wordpress";
+@import "partials/accessibility";
 
 // Section/page-specific CSS
 @import "partials/header-college";
 @import "partials/navigation";
-@import "partials/content";
+@import "partials/content-col";
 @import "partials/comments";
 @import "partials/sidebars";
 @import "partials/widgets";
+@import "partials/search";
+@import "partials/plugins";
 @import "partials/footer";

@@ -92,7 +92,8 @@ body {
 @media #{$medium-up} {
 
     .top-bar-wrapper {
-		//@include grid-row();
+		@include grid-row();
+
 		width: 100%;
         overflow: visible;
         background: transparent;
@@ -104,14 +105,14 @@ body {
         width: 100%;
         overflow: visible;
         margin: 0 auto;
-        background: $gray-light;
+        background: $primary-color;
         li a:not(.button) {
-          background: $gray-light;
+          background: $primary-color;
         }
         .top-bar-section ul {
-          background: $gray-light;
+          background: $primary-color;
           li > a {
-            background: $gray-light;
+            background: $primary-color;
           }
         }
 	  }

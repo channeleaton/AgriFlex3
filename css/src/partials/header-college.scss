@@ -101,7 +101,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
         border-left: #fff 10px solid;
         padding: 28px 20px 37px 20px;
         position: absolute;
-        background: url("//aglifesciences.tamu.edu/wp-content/themes/college-2013/images/logo-w@2x.png") no-repeat center $primary-color;
+        background: url("../img/logo-college.png") no-repeat center $primary-color;
         background-size: 146px 28px;
         width: 200px;
         height: 37px;
@@ -118,6 +118,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
       text-align: right;
     }
 
+    .title-area {
+      padding: 16px 1em;
+    }
+
     .site-description,
     .title-area,
     .search-form,
@@ -129,14 +133,15 @@ only screen and (min-device-pixel-ratio: 1.5) {
       float: right;
       max-height: none;
       margin: 0.1em 0 0 0;
-      .is-vishidden {
-        @include visuallyhidden;
-      }
 
-      input[type="search"]{
-        width: 100%;
-        border: 1px solid gray;
+      input[type="search"] {
+        width: 180px;
+        border: 1px solid #d5d6da;
         padding: 0.1em .3em;
+        background: #fff url("../img/search-college.png") no-repeat 150px 45%;
+      }
+      input[type="submit"] {
+        @include visuallyhidden;
       }
       fieldset {
         position: relative;
@@ -165,6 +170,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
       position: absolute;
       right: 0;
       top: 0;
+      padding: 1em;
     }
 
   }
@@ -181,7 +187,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     max-width: 100%;
     height: 42px;
     display: block;
-    position: absolute;
+
 
     $nav-item-width: 167;
     $nav-item-height: 42;
@@ -195,7 +201,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     ul {
       position: absolute;
-      left: 204px;
+
       margin: 0;
 
       li {
@@ -280,11 +286,34 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 }
 
-@media #{$large-up}{
-
+@media #{$medium-up-common}{
+  .agency-bar {
+    position: absolute;
+    ul {
+      left: 220px;
+    }
+  }
+  .site-header .primary-search {
+    padding: 0 1em 0 0;
+  }
 }
 
-@media #{$large-only}{
+@media #{$large-up}{
+
+  .agency-bar {
+    ul {
+      left: 204px;
+    }
+  }
+
+  .site-header {
+    .title-area {
+      padding: 16px 0;
+    }
+    .primary-search {
+      padding: 0;
+    }
+  }
 
 }
 

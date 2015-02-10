@@ -21,6 +21,7 @@ $agency-type: "extension";
 @import "partials/forms";
 @import "partials/layout-ext";
 @import "partials/wordpress";
+@import "partials/accessibility";
 
 // Section/page-specific CSS
 @import "partials/header-ext";
@@ -29,4 +30,6 @@ $agency-type: "extension";
 @import "partials/comments";
 @import "partials/sidebars-ext";
 @import "partials/widgets";
+@import "partials/search";
+@import "partials/plugins";
 @import "partials/footer-ext";

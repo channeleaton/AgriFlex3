@@ -1,0 +1,218 @@
+/* Content Area
+---------------------------------------------------------------------------------------------------- */
+
+/* Entries
+--------------------------------------------- */
+
+.entry {
+	@include margin-trailer();
+}
+
+.entry-content {
+
+	.attachment a,
+	.gallery a {
+		border: none;
+	}
+
+	ol,
+	p,
+	ul {
+		margin-bottom: 26px;
+	}
+
+	ol,
+	ul {
+		margin-left: 40px;
+
+		&.list-unstyled {
+			margin-left: 20px;
+
+			> li {
+				list-style: none;
+			}
+		}
+	}
+
+	ol li {
+		list-style-type: decimal;
+	}
+
+	ul li {
+		list-style-type: disc;
+	}
+
+	ol ol,
+	ul ul {
+		margin-bottom: 0;
+	}
+
+	.search-form {
+		width: 50%;
+	}
+}
+
+.archive-description,
+.author-box,
+.entry,
+.entry-footer .entry-meta {
+	padding: 0;
+}
+
+.quote-caption {
+	margin-bottom: 26px;
+}
+
+.entry-meta {
+	clear: both;
+	color: $gray-dark;
+	@include adjust-font-size-to(14px);
+}
+
+.entry-header .entry-meta {
+	margin-bottom: 24px;
+}
+
+.entry-title {
+	@include break-text();
+}
+
+
+/* Entry Navigation
+--------------------------------------------- */
+
+.pagination {
+	clear: both;
+	@include adjust-font-size-to(14px);
+	margin: 40px 0;
+
+	li {
+		display: inline;
+		a {
+			cursor: pointer;
+			display: inline-block;
+			padding: 8px 12px;
+
+			&:hover {
+			}
+		}
+
+		&.active a {
+		}
+	}
+}
+
+/* page-template-landing1
+--------------------------------------------- */
+.page-template-landing1 {
+
+  .soliloquy-container {
+    margin: 0px auto;
+
+    @media #{only screen} and (min-width:#{ 780px }) {
+      padding-top: 1em;
+    }
+
+    @media #{$large-up} {
+      padding-top: 0;
+      padding-left: 1em;
+    }
+  }
+
+  .featured-content {
+    margin-bottom: 2em;
+  }
+
+  .content {
+    padding-right: 0px;
+    padding-left: 0px;
+    h2, h3 {
+      font-family: $body-font-family;
+    }
+  }
+
+  .page-title {
+    margin-top: 0;
+  }
+
+  .welcome {
+    margin: 0 0 2em 0;
+  }
+
+  .home-content {
+    padding-right: 1em;
+    padding-left: 1em;
+
+    @media #{$large-up} {
+      padding-right: 0;
+    }
+  }
+
+  .program-head {
+    padding: 0 0 0 1em;
+  }
+  .program-image {
+    width: 100%;
+  }
+
+  .program-list {
+    .program-row {
+
+      @include grid-row();
+
+    }
+    .single-program {
+      @include grid-column(12);
+
+      @media #{$small-up} {
+        @include grid-column(6);
+      }
+
+      @media #{$medium-up} {
+        @include grid-column(4);
+      }
+    }
+
+  }
+
+}
+
+@media #{$small-up} {
+
+}
+
+@media #{$small-only} {
+
+}
+
+@media #{$medium-up} {
+
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up}{
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
+}
