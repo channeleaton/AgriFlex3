@@ -151,8 +151,11 @@ class AgriFlex_Assets {
         if('agrilife-extension' == AG_EXT_DIRNAME ) {
             // For Extension
             $key = 'xox0blb';
+        } elseif ('agrilife-college' == AG_COL_DIRNAME ) {
+            // For College
+            $key = 'bbz1kzh';
         } else {
-            // For Default Ariflex3
+            // For Default Agriflex3
             $key = 'mtx5vmp';
         }
 
