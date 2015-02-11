@@ -12,13 +12,31 @@
     padding: 16px 0;
   }
 
+  .college-title {
+    margin: 0;
+
+    a {
+      border: 0;
+      overflow: hidden;
+      padding: 50px 130px;
+      background: url("../img/logo-college-maroon.png") no-repeat center transparent;
+      background-size: 190px 37px;
+      width: 190px;
+      height: 37px;
+
+      span {
+        display: none;
+      }
+    }
+  }
+
   .site-description {
     color: $site-description;
-    @include adjust-font-size-to(16px);
+    @include adjust-font-size-to(14px);
     font-weight: 300;
-    line-height: 1;
     margin: 0;
   }
+
 
   /* Full width header, no widgets */
 
@@ -39,12 +57,17 @@
 
   .site-description,
   .title-area,
-  .search-form,
-  .site-title {
+  .search-form{
     text-align: center;
   }
 
+  .site-title {
+    line-height: 1;
+    text-align: center;
+    margin: .5em;
+  }
 }
+
 
 .primary-search {
   display: none;
@@ -85,11 +108,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
     top: 200px;
     width: 100%;
   }
-  .site-title {
-    margin: 2em 0 0 0;
-  }
   .site-header {
 
+    .site-title {
+      margin: 2em 0 0 0;
+    }
+    
     .college-title {
       margin: -20px 0 0 0;
 
