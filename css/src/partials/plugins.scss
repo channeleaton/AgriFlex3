@@ -4,3 +4,42 @@
 .content .soliloquy-container .soliloquy-caption .soliloquy-caption-inside {
   padding-bottom: 2em;
 }
+
+
+/* Content Accordion
+--------------------------------------------- */
+
+a.accordion-title {
+  padding: 15px 0;
+  //background-color: #f7f7f9;
+  font-size: 1.1em;
+
+  &:hover {
+    //background-color: $gray-lighter;
+  }
+
+  &::before {
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid $primary-color;
+    margin: 0 20px 0 3px;
+    content: " ";
+    display: inline-block;
+  }
+
+  &.down::before {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid $primary-color;
+    margin: 0 16px 0 0;
+  }
+}
+
+.accordion-content {
+  width: 97% !important;
+  margin: 0 auto;
+  border-left: 1px dashed $gray-lighter;
+  padding-left: 2em;
+}
