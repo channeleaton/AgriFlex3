@@ -46,8 +46,23 @@
 }
 
 @media #{$medium-up} {
-  .top-bar-section ul.menu-search-container {
-    display: none;
+  .top-bar-section {
+    ul.menu-search-container {
+      display: none;
+    }
+    ul.menu li a[title='home'] {
+      display: block;
+      text-indent: -999em;
+      background: url("../img/college/home-college.png") no-repeat 50% 13px;
+      width: 21px;
+      padding: 1em 1em 0 0;
+      height: 30px;
+      margin: 0 .5em 0 1em;
+      @include no-transition;
+      &:hover {
+        background-position: 50% -17px;
+      }
+    }
   }
 
 }
