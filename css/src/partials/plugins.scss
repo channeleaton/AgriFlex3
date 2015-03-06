@@ -1,8 +1,19 @@
 /* Soliloquy
 --------------------------------------------- */
 
-.content .soliloquy-container .soliloquy-caption .soliloquy-caption-inside {
-  padding-bottom: 2em;
+.content .soliloquy-container {
+
+  .soliloquy-caption .soliloquy-caption-inside {
+    padding-bottom: 2em;
+  }
+
+  .soliloquy-pager {
+    text-align: left;
+    margin: 0 0 0 1em;
+    a {
+      @include no-transition;
+    }
+  }
 }
 
 
