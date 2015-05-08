@@ -22,12 +22,7 @@
 
 a.accordion-title {
   padding: 15px 0;
-  //background-color: #f7f7f9;
   font-size: 1.1em;
-
-  &:hover {
-    //background-color: $gray-lighter;
-  }
 
   &::before {
     width: 0;
