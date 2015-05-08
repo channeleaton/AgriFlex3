@@ -54,3 +54,120 @@ a.accordion-title {
   border-left: 1px dashed $gray-lighter;
   padding-left: 2em;
 }
+
+/* AgriLife People
+--------------------------------------------- */
+
+.single-people #content,
+.post-type-archive-people #content {
+  @include grid-column(12);
+}
+
+ul.people-listing-ul {
+  margin-left: 0;
+}
+
+// archive list
+.people-listing-item {
+  border-bottom: 1px dashed #f0f0f0;
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.people-container {
+  @include grid-row();
+  a:hover {
+    text-decoration: underline;
+  }
+  .people-image {
+    @include grid-column(4);
+    text-align: center;
+  }
+  .people-head {
+    @include grid-column(8);
+
+    h2 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+    h3 {
+      font-size: 1em;
+      margin: 0;
+    }
+  }
+  .people-contact-details {
+    @include grid-column(8);
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// single listing
+.people {
+  .people-single-image {
+    @include grid-column(5);
+  }
+
+  .people-person-details,
+  .education {
+    @include grid-column(7);
+  }
+
+  .people-person-content {
+    @include grid-column(12);
+  }
+
+  .field-office,
+  .field-title {
+    @include grid-column(4, $collapse: true);
+  }
+  .office,
+  .email,
+  .phone {
+    @include grid-column(8, $collapse: true);
+  }
+
+  .details {
+    .name {
+      display: none;
+    }
+    dd.role {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    dd.email {
+      word-wrap: break-word;
+    }
+    dd,dt {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+
+/* The Events Calendar tri.be
+--------------------------------------------- */
+.tribe-mini-calendar-event {
+  .vcard {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+
+@media #{$small-up} {
+
+}
+
+@media #{$medium-up} {
+  .single-people #content,
+  .post-type-archive-people #content {
+    @include grid-column(8);
+  }
+
+}
