@@ -18,7 +18,7 @@
 	}
 
 	.widget {
-      h4 {
+      h4.widget-title {
         font-size: 1.1em;
         margin-bottom: 1em;
         letter-spacing: 1px;
@@ -28,6 +28,7 @@
         text-align: left;
         text-transform: uppercase;
         padding: 3% 4% 3% 5%;
+        line-height: 1.1;
       }
 
 
@@ -39,18 +40,8 @@
         background-position: right -180px;
       }
 
-      /*&:nth-child(4n+3) h4.widget-title {
-        background-position: right -61px;
-        color: $gray-medium;
-      }*/
-
 	}
 
-	&.sidebar-primary {
-	}
-
-	&.sidebar-secondary {
-	}
 }
 
 @media #{$small-up} {
