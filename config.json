@@ -1,5 +1,5 @@
 {
-	"servers" : [ "extension" ],
+	"servers" : [ "extension", "coals" ],
 	"composer" : false,
 	"bower" : true,
 	"grunt" : true
