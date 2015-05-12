@@ -71,6 +71,9 @@ ul.people-listing-ul {
     border-bottom: none;
   }
 }
+.entry-content ul li.people-listing-item {
+  list-style-type: none;
+}
 .people-container {
   @include grid-row();
   a:hover {
@@ -79,6 +82,9 @@ ul.people-listing-ul {
   .people-image {
     @include grid-column(4);
     text-align: center;
+    img[title="No photo found"] {
+      width: 70px;
+    }
   }
   .people-head {
     @include grid-column(8);
@@ -94,6 +100,7 @@ ul.people-listing-ul {
   }
   .people-contact-details {
     @include grid-column(8);
+    float: right;
     p {
       margin-bottom: 0;
     }
@@ -161,7 +168,8 @@ ul.people-listing-ul {
 
 @media #{$medium-up} {
   .single-people #content,
-  .post-type-archive-people #content {
+  .post-type-archive-people #content,
+  .tax-types.content-sidebar #content {
     @include grid-column(8);
   }
 
