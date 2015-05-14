@@ -80,6 +80,17 @@ body {
 	@include grid-column(12);
 }
 
+/* Single Column Page Template
+--------------------------------------------- */
+
+.page-template-singlecolumn .site-inner {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    width: 100%;
+  }
+}
 
 @media #{$small-up} {
 
