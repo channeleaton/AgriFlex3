@@ -174,3 +174,15 @@ ul.people-listing-ul {
   }
 
 }
+
+/* PubMed Reflist
+--------------------------------------------- */
+.sidebar .pubmed-entry {
+  color: #000;
+  span.pubmed-link {
+    white-space: nowrap;
+    &, & a {
+      color: #5E564E;
+    }
+  }
+}
