@@ -132,12 +132,17 @@ body {
 
 	.one-half,
 	.three-sixths,
-	.two-fourths {
+	.two-fourths,
+  .one-of-2,
+  .two-of-2 {
 		@include grid-column(6);
 	}
 	 
 	.one-third,
-	.two-sixths {
+	.two-sixths,
+  .one-of-3,
+  .two-of-3,
+  .three-of-3 {
 		@include grid-column(4);
 	}
 	 
