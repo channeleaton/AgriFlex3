@@ -1,0 +1,13 @@
+#bg-image-container {
+  box-sizing: content-box;
+  width: 100%;
+  top: 42px;
+  position: absolute;
+  z-index: -1;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0;
+  padding-bottom: 25%;
+  min-height: 400px;
+}

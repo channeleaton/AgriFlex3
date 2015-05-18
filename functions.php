@@ -123,11 +123,19 @@ function agriflex_customize_css() {
 	?>
 		<style type="text/css">
 			<?php if ( get_theme_mod( 'agriflex_background_image' ) != '' && 0 < count( strlen( ( $background_image_url = get_theme_mod( 'agriflex_background_image' ) ) ) ) ) { ?>
-	    	body {
+	    	#bg-image-container {
   	  		background-image: url(<?php echo $background_image_url; ?>);
     		}
-			<?php } // end if ?>
+			<?php } ?>
 		</style>
 	<?php
 }
 add_action( 'wp_head', 'agriflex_customize_css');
+
+// Provide HTML container for background image
+function agriflex_custom_backgroundimage() {
+	?>
+		<div id="bg-image-container" data-src="<?php echo get_theme_mod( 'agriflex_background_image' ); ?>"></div>
+	<?php 
+}
+add_action( 'genesis_after', 'agriflex_custom_backgroundimage');
