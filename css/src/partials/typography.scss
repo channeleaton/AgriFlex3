@@ -24,15 +24,16 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
+.entry-header .entry-meta a,
+.entry-content a,
+.entry-footer a,
+.sidebar p a,
+.recentcomments a{
 	text-decoration: underline;
 }
 
-.entry-header .entry-meta,
-.entry-content a,
-.entry-footer a,
-.sidebar a {
-	text-decoration: underline;
+.sidebar a:hover {
+  text-decoration: underline;
 }
 
 blockquote {
